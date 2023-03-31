@@ -15,14 +15,21 @@
     <p>input type 속성이 radio인 경우 select태그와 같이 제한된 내용을 입력하게 끔 유도할 때 사용하며, radio 버튼의 name속성 값을 동일하게 하면 여러개의 radio 버튼 중 1개만 선택되게 할 수 있다.</p>
     <p>input type=:"text" 태그의 경우는 짧은 한 줄의 텍스트를 입력시킬 때 사용하며, textarea 태그는 장문의 텍스트를 입력시킬 때 사용한다.</p>
     <hr>
+    <ul>
+        <li>value - 입력박스에 들어가는 실제 정보</li>
+        <li>disabled - 선택한 입력박스를 비활성</li>
+        <li>required - 선택한 입력박스의 실제정보를 반드시 입력시킬 때 사용</li>
+        <li>selected - 셀렉트박스에서 선택한 option 태그가 선택된 상태로 보이게 할 때 사용</li>
+        <li>체크박스/라디오 버튼이 체크된 상태로 표현할 때</li>
+    </ul>
     <form action="#">
         <fieldset>
             <legend>계정정보</legend>
             <label for="user_id">아이디:</label>
-            <input type="text" id="user_id" placeholder="아이디를 입력하시오">
+            <input required type="text" id="user_id" placeholder="아이디를 입력하시오">
             <br>
-            <label for="user_pw">비밀번호:</label>
-            <input type="password" id="user_pw" placeholder="비밀번호를 입력하시오">
+            <label required for="user_pw">비밀번호:</label>
+            <input required type="password" id="user_pw" placeholder="비밀번호를 입력하시오">
             <br>
             <label for="user_pw2">비밀번호확인:</label>
             <input type="password" id="user_pw2" placeholder="비밀번호를 한 번 더 입력하시오">
@@ -30,7 +37,7 @@
         <fieldset>
             <legend>개인정보</legend>
             <label for="user_name">이름:</label>
-            <input type="text" id="user_name" placeholder="이름">
+            <input type="text" id="user_name" placeholder="이름" required>
             <br>
             <label for="user_birth">생년월일:</label>
             <input type="number" id="user_birth" placeholder="년">
@@ -39,7 +46,7 @@
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
-                <option>4</option>
+                <option selected>4</option>
                 <option>5</option>
                 <option>6</option>
                 <option>7</option>
@@ -54,13 +61,13 @@
             <label>성별</label>
             <input type="radio" id="woman" name="user_gen">
             <label for="woman">여자</label>
-            <input type="radio" id="man" name="user_gen">
+            <input type="radio" id="man" name="user_gen"checked>
             <label for="man">남자</label>
             <input type="radio" id="no_select" name="user_gen">
             <label for="no_select">선택 안 함</label>
             <br>
-            <labe>취미</labe>
-            <input type="checkbox" id="like1">
+            <label>취미</label>
+            <input type="checkbox" id="like1" checked>
             <label for="like1">가재키우기</label>
             <input type="checkbox" id="like2">
             <label for="like2">열대어키우기</label>
