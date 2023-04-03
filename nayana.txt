@@ -1,0 +1,6 @@
+-모두 원천은 div 
+<figure> img / video로 배너를 채울 때 (이미지 전용태그)
+
+div 대신하여 section으로 구성
+
+div class="nav"    =   <nav> 메뉴
