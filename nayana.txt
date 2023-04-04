@@ -4,3 +4,4 @@
 div 대신하여 section으로 구성
 
 div class="nav"    =   <nav> 메뉴
+class / id 둘 중 아무거나 사용해도 무방 단 차이점 class는 이름이 중복 가능 id는 중복 x / 어느 태그에나 사용가능
