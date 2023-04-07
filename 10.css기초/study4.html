@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p{color:red}
+        div>h2{color:blue;}
+        .a~li{color:green}
+        .b+li{text-decoration:underline;}
+</style>
+</head>
+<body>
+    <h1>관계선택자</h1>
+    <p>선택자부분에 태그의 족보관계를 사용해서 구성할 수 있다.</p>
+    <hr>
+    <div class=="box">
+        <h2>하위선택자(자손선택자)-모든 자손들</h2>
+        <p>선택자 부분에서 띄어쓰기를 사용하면 (~안에 포함되어있는 자손중에서)로 해석한다.</p>
+    </div>
+
+    <div class="listbox">
+        <h2>자식선택자-해당태그 내에 자손</h2>
+        <p>선택자 부분에서 ">"를 사용하면 (~안에 포함되어있는 자식중에서)로 해석한다.</p>
+        <ul>
+            <li>
+                <h3>list1</h3>                
+            </li>
+            <li>
+                <h3>list2</h3>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <h2>다음 형제 선택자</h2>
+        <p>선택한 태그를 기준으로 다음형제를 선택할 수 있다</p>
+        <p>선택자 부분에서 +, ~ 사용하여 다음형제를 선택할 수 있다.</p>
+        <ul class="lists">
+            <li class="a b">list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li class="b">list4</li>
+            <li>list5</li>
+            <li>list6</li>
+        </ul>
+        <p class="b">선택자 부분에서 +를 사용하면 앞에 선택된 태그의 다음형제 하나만 선택한다.</p>
+
+    </div>
+    
+</body>
+</html>

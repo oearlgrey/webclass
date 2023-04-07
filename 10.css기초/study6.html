@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일의 상속</title>
+    <link rel="stylesheet" href="./css/study6.css">
+</head>
+<body>
+    <h1>스타일의 상속</h1>
+    <p>부모태그가 자식태그에게 스타일을 물려주는 행위</p>
+    <p>스타일의 상속은 언제나 일어나지 않는다. => 모든 스타일 속성이 상속되는 것은 아니다.</p>
+    <p>상속스타일은 언제나 후순위로 밀린다</p>
+    <!-- 직접적 스타일이 간접적 스타일보다 더 앞선다 부모가 간접적으로 스타일을 주려고 해도 직접적 스타일이 지정되어 있으면 밀린다.-->
+    <div class="parent"> 
+        <h2>title</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi necessitatibus voluptate eveniet sit molestias ut consequatur similique asperiores. Fuga nihil dolor aperiam nobis modi saepe, voluptas cupiditate recusandae architecto cum.</p>
+        <ul>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+        </ul>
+    </div>    
+</body>
+</html>
