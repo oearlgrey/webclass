@@ -10,7 +10,14 @@
         div>h2{color:blue;}
         .a~li{color:green}
         .b+li{text-decoration:underline;}
-</style>
+        form>[for]{color:green;}
+        [checked]+label{font-weight:bold;color:red;}
+        [class]{border:1px solid red;}
+        input[type="text"]{background:red;color:white;}
+        ol>li:nth-of-type(9){color:lime;background:black;}
+        ol>li:last-of-type{color:red;}
+        ol>li:nth-of-type(2n){border:2px solid gold;}
+    </style>
 </head>
 <body>
     <h1>관계선택자</h1>
@@ -46,8 +53,37 @@
             <li>list6</li>
         </ul>
         <p class="b">선택자 부분에서 +를 사용하면 앞에 선택된 태그의 다음형제 하나만 선택한다.</p>
-
+        <p>선택자부분에서 ~을 사용하면 앞에 선택된 태그의 다음형제 여러개르 선택한다.</p>
     </div>
-    
+    <div class="box">
+        <h2>속성선택자</h2>
+        <p>태그가 갖고있는 속성을 사용하여 선택자를 구성할 수 있다.</p>
+        <form action="#">
+            <label for="username">이름</label>
+            <input type="text" id="username">
+            <label for="userpw">비밀번호</label>
+            <input type="password" checked id="autologin">
+            <input type="checkbox" checked>
+            <label for="autologin">자동로그인</label>
+        </form>
+    </div>
+    <div class="box">
+        <h2>순번선택자</h2>
+        <p>태그가 갖고 있는 순서를 이용하여 선택할 수 있다.</p>
+        <p>태그명:nth-of-type() 괄호안에는 수식/절대값을 입력하여 선택할 수 있다.</p>
+        <p>태그명:last-of-type/태그명:first-of-type을 통해 마지막과 첫 번째를 선택할 수 있다.</p>
+        <ol>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+            <li>list6</li>
+            <li>list7</li>
+            <li>list8</li>
+            <li>list9</li>
+            <li>list10</li>
+        </ol>
+    </div>
 </body>
 </html>
