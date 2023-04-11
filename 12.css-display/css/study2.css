@@ -1,0 +1,22 @@
+html{
+    width:auto;
+}
+
+.boxa{
+    border:10px solid red;
+    width:500px;
+    box-sizing:content-box;
+    /* 기본값:width/height를 지정하였을 때 안쪽의 컨텐트가 입력되는 컨텐트 박스의 크기를 변형한다.  */
+}
+
+h2{
+    border:1px solid blue;
+}
+
+.boxb{
+
+    /* width:auto; 기본값 */
+    border:10px solid green; 
+    width:500px;
+    box-sizing:border-box;
+}

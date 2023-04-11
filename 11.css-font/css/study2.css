@@ -1,28 +1,10 @@
-@font-face{
-    font-family: myfont;
-    src:url("../font/koryung.ttf");
-}
 .myfont1{font-family: myfont;}
 
-@font-face {
-    font-family:"감자꽃";
-    src: url("../font/gamja.ttf");
-}
 .myfont2{font-family: "감자꽃";}
 /* 한글 사용시 ""표시 */
 
-@font-face {
-    font-family: "singleday regular";
-    src: url("../font/SingleDay-Regular.ttf");
-}
 .myfont3{font-family:"singleday regular";}
 /* 폰트명에 띄어쓰기가 있다면 ""표시 */
 
-@font-face {
-    font-family: 'NeoDunggeunmoPro-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 .myfont4{font-family:NeoDunggeunmoPro-Regular}
 

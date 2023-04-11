@@ -1,0 +1,26 @@
+h1,p{border:1px solid red;}
+span{border:1px solid blue;}
+.box{
+    width:300px;
+    height:300px;
+}
+.line{
+    display:inline-block;
+    width:300px;
+    height:300px;
+}
+input{
+    width:200px;
+    height:200px;
+}
+
+select{
+    width:200px;
+    height:200px;
+}
+
+h1{
+    /* display:inline; */
+    width:300px;
+    height:300px;
+}
