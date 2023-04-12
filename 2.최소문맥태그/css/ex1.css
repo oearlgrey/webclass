@@ -22,3 +22,9 @@ h3{
 blockquote{
     text-align:center;
 }
+
+.con{
+    width:1000px;
+    margin:0 auto;
+    border: 1px solid blue;
+}
