@@ -1,0 +1,74 @@
+/* *{margin:0;padding:0;}
+
+body{
+    border:1px solid red;
+    font-family: "noto sans";
+    font-size:20px;
+}
+.con1{
+    margin:0 auto;
+    width:980px;
+}
+.bold{
+    font-weight: bold; 
+    font-size:22px;
+}
+.pulmu{ 
+    font-family: "pulmu";
+    src: url(../font/PulmuoneLOHASBold.woff);
+    font-weight: bold; 
+}
+.con1>p{
+    margin-top: 40px;
+}
+
+@font-face {
+    font-family: "pulmu"; 
+    src: url(../font/PulmuoneLOHASBold.woff);
+} */
+
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal;}
+address, em, i{font-style:normal;}
+strong, b{font-weight:normal;}
+a{text-decoration:none;color:inherit;}
+
+html{
+    font-size:20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* layout */
+.con1{
+    width:980px;
+    margin:0 auto;
+}
+
+/* detail */
+.con1 h2{
+    font-weight:700; 
+    /* 400 기본값 */
+    margin-bottom:35px;
+    margin-top:40px;
+    font-size:22px;
+}
+
+.con1 p{
+    margin-bottom:35px;
+
+}
+
+.con1 .mb100{
+    margin-bottom:100px;
+}
+.con1 .sign{
+    margin:70px 0 35px;
+    /* margin-top:70px;
+    margin-bottom:35px; */
+    font-family: "pulmu";
+    font-size:30px;
+}
+
+@font-face {
+    font-family: "pulmu"; 
+    src: url(../font/PulmuoneLOHASBold.woff);
+}

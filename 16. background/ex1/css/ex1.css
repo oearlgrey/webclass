@@ -1,0 +1,47 @@
+/* 1.reset */
+*{margin:0;padding:0;}
+2.h1~h6{font-size:inherit;font-weight:normal;}
+address, em, i{font-style:normal;}
+strong, b{font-weight:normal;}
+a{text-decoration:none;color:inherit;}
+
+/* 2. common - style  */
+body{
+    background:ivory;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:14px;
+}
+
+/* 3. layout - (크기와 배치) */
+.container{
+    width:900px;
+    margin:0 auto;
+    background:url("../images/dream.jpg") no-repeat 100% 100%;
+}
+/* 4. detail(글씨 크기, 글씨색, 배경색, 마진, 패딩 */
+.container>h1{
+    font-size: 50px;
+    background:green;
+    color:white;
+    border-top:3px solid red;
+    border-bottom:3px solid red;
+    text-align: center;
+    padding:10px 0px;
+    /* hegiht:100px
+    line-height: 100px; */
+    margin-bottom: 10px;
+}
+.container>h2{
+    font-size:30px;
+    background:orange;
+    border-bottom:3px solid red;    
+    margin-bottom: 10px;
+}
+.container>p{
+    margin-bottom: 10px;
+}
+.copy{
+    border-top:3px solid red;
+    font-weight: bold;
+    padding-top:10px;
+}
