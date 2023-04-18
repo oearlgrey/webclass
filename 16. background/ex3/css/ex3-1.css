@@ -1,0 +1,60 @@
+
+/* common */
+html{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:20px;
+}
+
+/* layout */
+.banner{
+    height:250px;
+    margin-bottom:50px;
+    overflow: hidden;
+}
+.container{
+    width:1200px;
+
+    margin:0 auto;
+}
+.container>h2{    font-size: 30px;
+    font-weight: bold;
+    background: url(../img/sub_tit_line.gif) repeat-x 0 50%;
+    margin-bottom: 100px;
+}
+.container>h2>span{
+    background:white;
+    padding-right:18px;
+}
+.container>h3{
+    font-size:52px;
+
+    font-family: "pulmu";
+    text-align: center;
+    padding:0 70px;
+    margin-bottom:50px;
+}
+.container>h3>span{
+    color:#7EAE4B;
+}
+@font-face{
+    font-family: "pulmu";
+    src: url(../예제2/PulmuoneLOHASBold.woff);
+}
+.container section{
+ 
+    width:810px;
+    padding:40px 90px 50px;
+    background:#F4F4F4;
+    margin:0 auto;
+    box-sizing:border-box;
+    text-align: center;
+}
+.container>section>h4{
+    font-family: "pulmu";
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+.container>section>h4+p{
+    margin-bottom:30px;
+}

@@ -1,0 +1,58 @@
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal;}
+address, em, i{font-style:normal;}
+strong, b{font-weight:normal;}
+a{text-decoration:none;color:inherit;}
+
+
+@font-face {
+    font-family: "pulmul";
+    src: url(../예제2/PulmuoneLOHASBold.woff);
+}
+
+html{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:20px;
+}
+
+.con1{
+    width:1200px;
+    margin:0 auto;
+    text-align: center;
+}
+
+.p30px{
+    font-size:30px;
+    margin-top:30px;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.p52px{
+    font-family: "pulmul";
+    font-size:52px;
+    margin:100px 0 50px;
+    text-align: center;
+    padding:0 70px;
+     /* /*위 아래 오 왼   */
+}
+.p35px{
+    font-size:35px;
+    font-family: "pulmul";
+}   
+.p20px{
+    font-size:20px;
+    margin-top:30px;
+    
+}
+.grey{
+    width:629px;
+    margin:0 auto;
+    background-color:rgb(218, 218, 218); 
+    padding:40px 40px 40px;
+
+}
+.green{
+    color:green;
+}
