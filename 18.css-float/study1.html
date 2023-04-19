@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/study1.css">
+</head>
+<body>
+    <h1>float</h1>
+    <p>블록 태그들을 나란히 배치하는데 목적이 있다.</p>
+    <p>두웅~~ 띄워서 부모의 컨텐츠 박스 안에서 왼쪽 혹은 오른쪽으로 배치하는 방법 (left, right)</p>
+    <p>두웅~~ 뜰 때 문서의 흐름에서 제외된다 -> 부모태그 입장에서 집나간 자식으로 간주된다.</p>
+    
+    <!-- 부모의 높이를 컨텐츠의 높이에 맞춰야 레이아웃 유지됨 height를 auto로 준다-->
+    <hr>
+    <h1>clear</h1>
+    <p>float를 해제할 때 사용하는 속성 - clear 속성이 적용된 태그는 앞서 만들어진 형제태그 중에서 float가 되어있는 태그 중 가장 아래까지 내려와있는 floating 태그 바로 밑에 배치가 된다. 이 때, clear속성이 지정된 태그가 배치가 되면서 부모태그는 height:auto이기 때문에 clear속성이 지정된 태그가 있는 곳까지 높이를 자동으로 늘린다.</p>
+    <!-- left or right 으로 지정할 수 있다. float:left 라면 clear:left / 하지만 자주 쓰진 x both라고 입력하면 해결-->
+    <p></p>
+    <div class="parent">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <!-- <section class="clear">clearbox</section> -->
+    </div>
+    <p class="nextp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor maxime tempore eligendi beatae cumque earum harum facilis dignissimos illum repellat, molestiae sed odio magnam amet itaque voluptas exercitationem. Numquam?</p>
+</body>
+</html>
