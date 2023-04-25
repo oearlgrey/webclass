@@ -35,27 +35,14 @@ header{
     display:flex;
     justify-content:space-between; 
 }
-.logo{
 
-
-}
-.nav{
-   
- }
-
- .lnb{
-    display:flex;
-  
+.lnb{
+    display:flex;  
     justify-content: flex-end;
     margin-bottom:30px;
-
-
 }
-
 .gnb{
     display:flex;
-
-
 }
 
 .lnb>li{
@@ -69,11 +56,6 @@ header{
 }
 .lnb>li:last-of-type{   
     padding-right:16px;
-}
-
-
-.gnb>li{
-
 }
 
 .gnb>li{
