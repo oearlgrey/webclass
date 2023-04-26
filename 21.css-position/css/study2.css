@@ -1,0 +1,28 @@
+*{margin:0;padding:0;}
+.parent{
+    border:10px solid orange;
+    width:500px;
+    height:500px;
+    margin:0 auto;
+    position: relative;
+}
+
+.parent>div{
+    position:absolute;
+    width:200px;height:200px
+}
+
+
+.a{
+    background:red;
+    left:0; top:0;
+}
+.b{
+    background:green;
+    left:100px;top:100px;
+    z-index:1;
+}
+.c{
+    background:blue;
+    left:200px;top:200px;
+}
