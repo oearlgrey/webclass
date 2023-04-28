@@ -1,0 +1,260 @@
+/* reset */
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal;}
+b,strong{font-weight: normal;}
+i,em,address{font-style: normal;}
+a{color:inherit;text-decoration: none;}
+ul,ol{list-style: none;}
+
+
+/* common */
+
+html{
+    font-size:12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cw{
+    width:1000px; margin:0 auto;
+}
+
+/* layout */
+#container{}
+
+.top{
+    background: url("../img/bg_body.jpg") no-repeat 50% 50%;
+    background-size:cover;
+}
+.bottom{
+    background:#2a367e;
+}
+
+
+header{
+}
+/* .mainbanner{
+    border: 1px solid green;
+}
+
+footer{
+    order: 1px solid blue;
+}
+.contents{
+    order: 1px solid blue;
+} */ 
+
+/* header */
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lnb{
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom:30px;
+}
+
+
+.lnb>li{
+    color:#888;
+    text-transform: uppercase;
+    font-size:0.9rem;
+    padding-right:15px;
+    background:url("../img/bg_sideMenu.gif") no-repeat calc(100% - 5px) 50%;
+}
+
+.lnb>li:last-of-type{
+    padding-right:0;
+    background:none;
+}
+
+.gnb{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.gnb>li{
+    padding:10px 20px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* mainbanner */
+/* 첫 번째 자식 태그한테 margin-top을 만들어서 여백을 주는 것보다 부모태그한테 padding-top을 지정해주는 것이 좋다.
+    그 이유는 자식태그는 content-box 안에 놓여있고 content-box안에 바깥쪽으로 부모태그의 padding 그리고 border를 밀어내는 것이 자식태그의 margin이기 때문이다
+    만약에 부모태그에 padding과 border가 없다면 자식태그가 밀어내는 여백이 부모태그 바
+    깥으로 흘러버리게 되어 부모태그의 높이가 정상적으로 유지되지 않는다.
+ -> 첫 번째 자식 - > margin-top, 마지막 자식 - > margin-bottom 주면 안됨.
+  부모를 밀어내게 됨
+ 안전한 방법: 대신 자식의 부모에게 패딩을 준다.*/
+
+.mainbanner{
+    padding-top:40px;
+    padding-bottom:100px;
+}
+
+
+.mainbanner>h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.8rem;
+    color: #2a367e;
+    margin-bottom:40px;
+    align-items: flex-start;
+}
+
+.mainbanner>dl{
+
+    width:400px;
+    height:120px;
+    position:relative;
+}
+
+/* dt의 높이를 잡았기 때문 clear를 할 필요없이 float를 사용할 수 있다. */
+.mainbanner>dl>dt{
+    height:30px;
+    float:left;
+
+    display:flex;
+    align-items: center;
+    padding:0 10px;
+}
+
+/* class=on을 가진 dt에게 고정될 스타일 값 */
+.mainbanner>dl>dt.on{
+    font-weight:bold;
+    color:#2a367e;
+    border-bottom:1px solid #2a367e;
+
+}
+
+/* absolute가 돼서 dl의 자식으로 간주되지 않음  */
+.mainbanner>dl>dd{
+    position:absolute;
+    left:0;
+    top:40px;
+    width:100%;
+    display:none;
+}
+
+/* on 클래스 dt의 다음형제인 dd 보여지게 */
+.mainbanner>dl>dt.on+dd{
+    display:block;
+}
+
+.mainbanner dd li{
+    margin-bottom:2px;
+    display:flex;
+    justify-content: space-between;
+}
+.mainbanner dd li:last-of-type{
+    margin-bottom:0;
+}
+
+/* contents */
+
+.contents{
+
+    padding-top:30px;
+    padding-bottom:100px;
+    display:flex;
+    color:#fff;
+}
+
+.contents>section{
+    
+    margin-right:80px;
+}
+
+.contents>section:last-of-type{
+    margin-right:0;
+}
+
+.contents>section>h3{
+    margin-bottom:24px;
+}
+
+.quicklist{
+
+    /* 좀 더 선호
+    list-style-type:decimal; */
+    /* decimal 10진수 */
+    /* list-style-position: inside; */
+    /* 기본값 outside */
+
+    background:url("../img/bg_service.gif") no-repeat 0 4px;
+    line-height:164%;
+
+    padding-left:12px;
+   
+}
+
+.tabmenu{
+    /* dl 높이 110 = dt+dd 높이 */
+    width:190px;
+    height:110px;
+    position: relative;
+}
+
+.tabmenu>dt{
+    float:left;
+    height:24px;
+    display:flex;
+    align-items:center;
+    padding:0 14px;
+    background: #1c2566;
+    margin-right:4px;
+}
+
+.tabmenu>dt.on{
+    background:#4152ba;
+}
+
+.tabmenu>dd{
+    position:absolute;
+
+    left:0; top:30px;
+    width:100%;
+     /* 부모 만큼의 너비를 주기 */
+    height:80px;
+    /* 왜 높이를 제한했는가? 흘러넘치는 사진 때문 */
+    display:none;
+}
+
+.tabmenu>dt.on+dd{
+    display:block;
+    /* 안 보이는 것을 보이게 하는 것이 아닌 
+    부모 만큼 너비를 지정받은 박스 사이즈로 만들어준다라는 것임.
+    =>display:none 을 해제한다. */
+}
+
+/* inline인 a를 block으로 만들어 dd의 높이를 상속*/
+.tabmenu>dd>a{
+    display:block;
+    height:100%;
+}
+
+/* img 넘치지 않게 contain해줌 */
+.tabmenu>dd>a>img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+/* footer */
+footer{
+    display:flex;
+    justify-content: space-between;
+    border-top:1px solid #fff;
+    padding-top:20px;
+}
+
+footer>div>label{
+    display:none;
+}
+footer>div>select{
+    background:#2a367e;
+    color:#fff;
+    padding:3px 40px 3px 10px;
+    margin-right:15px;
+}
