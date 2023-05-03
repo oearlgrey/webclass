@@ -1,0 +1,102 @@
+*{margin:0;padding:0;}
+ul,ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+/* layout */
+header{
+    background:orange;
+    position:fixed;
+    left:0; 
+    top:0;
+    width:200px;
+    height:100%;
+    transition: all 0.5s ease 0s;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header:hover{
+    width:300px;
+}
+header:hover+.container{
+  width:calc(100% - 300px);
+  margin-left:300px;
+}
+
+
+header:after{
+    content: "";
+    height:50px;
+    border:1px solid green;
+    /* 부모에게 플렉스를 줬기 때문에 현재 박스형태 (플렉스 아이템상태임) */
+}
+
+ 
+
+ /* header 영역에 fixed 되어 있어서 header 기준으로 이동 */
+
+/* .gnb{
+    border:1px solid red;
+    position:absolute;
+    left:0;top:50%;
+    transform: translateY(-50%);
+    width:100%;
+    box-sizing: border-box;
+} */
+
+.gnb{
+   
+    
+}
+
+.gnb>li{
+    height:50px;
+    overflow:hidden;
+    transition: all 0.5s ease 0s;
+    border-bottom:1px solid #ddd;
+}
+
+.gnb>li:hover{
+    height:220px;
+}
+.gnb>li>a{
+    height:50px;
+    display:flex;
+    align-items:center;
+    padding-left:50px;
+}
+
+.gnb>li>ul>li{
+    height:40px;    
+}
+
+.gnb>li>ul>li:hover{
+    background:black;
+    color:#fff;
+}
+
+.gnb>li>ul>li>a{
+    display:flex;
+    height:100%;
+    align-items: center;
+    padding-left:60px;
+}
+
+.container{
+    width:calc(100% - 200px);
+    margin-left:200px;
+    transition: all 0.5s ease 0s;
+}
+
+
+.container>div{
+    height:100vh;
+
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
