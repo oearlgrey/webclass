@@ -1,0 +1,27 @@
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal;}
+b,strong{font-weight: normal;}
+i,em,address{font-style: normal;}
+a{color:inherit;text-decoration: none;}
+ul{list-style: none;}
+ul,ol{list-style: none;}
+
+/*  */
+html{
+    
+}
+.container{
+    width:1400px;
+    margin:0 auto;
+}
+
+.top{
+    background:#E4C486;
+}
+.rightmenu img{
+    height:25px;
+}
+
+.logoarea img{
+    width: 200px;
+}
