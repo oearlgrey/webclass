@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비만도 예제</title>
+</head>
+<body>
+    <h1>퀴즈</h1>
+    <pre>사용자에게 체중과 키를 입력받아서 bmi 수치를 계산하여 수치에 따라 비만, 과체중, 정상, 저체중으로 나누어 결과를 body 태그에 필기하는 소스코드를 완성하세요
+        
+        bmi 계산식
+        70kg의 170cm 의 bmi 수치 계산식
+        70/(1.7*1.7)
+
+        계산된 bmi가 25이상이라면 비만
+                    23이상 24.9 이하라면 과체중
+                    18.5이상 22.9 이하라면 정상
+                    18.5미만 이라면 저체중 
+        완성예시) 당신의 키는 170cm 이고 몸무게는 70kg입니다. bmi수치는 24.2이며 과체중 입니다          
+    </pre>
+    <script>
+        let height = Number(prompt("키를 입력해주세요"))
+        let weight = Number(prompt("몸무게를 입력해주세요"))
+        let bmi = Math.round(weight/((height*0.01)*(height*0.01)))
+        //or weight / Math.pow((height/100),2)
+        //or hegiht/100
+        let bmiresult;
+        // 삼항연산자 변수 값을 저장 문자데이터가 남는 것
+                    //bmiresult = bmi>=25 ? "비만" :
+                    //bmi>=23 && bmi<=24.9 ? "과체중" :
+                    //bmi>=18.5 && bmi<=22.9 ? "정상" : "저체중"
+
+      //if 계산해서 남는 것이 아닌 실행이 되는 것
+      //if문과 같은 조건식은 변수에 저장될 수가 없다.
+        if(bmi>=25){
+            bmiresult = "비만"
+        }else if(bmi>=23 && bmi<=24.9){
+            bmiresult = "과체중"
+        }else if(bmi>=18.5 && bmi<=22.9){
+            bmiresult = "정상"
+        }else{
+            bmiresult = "저체중"
+        }
+
+
+
+        // if(bmi>=25){
+        //     (bmiresult = "비만")
+        // }else if(bmi>=23){
+        //     (bmiresult = "과체중")
+        // }else if(bmi>=18.5){
+        //     (bmiresult = "정상")
+        // }else{
+        //     (bmiresult = "저체중")
+        // }
+        document.write(`당신의 키는 ${height}cm 이고 몸무게는 ${weight}kg입니다. bmi 수치는 ${bmi}이며 ${bmiresult}입니다 `)
+
+    </script>
+</body>
+</html>
