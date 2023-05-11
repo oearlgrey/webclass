@@ -13,7 +13,6 @@ html{
     font-family: 'Noto Sans KR', sans-serif;
 }
 .container{
-
     margin:0 auto;
 }
 
@@ -40,19 +39,26 @@ header{
     height:14px;
 }
 
+/* 메인  */
+
 /* 상단 banner */
 
 .topbanner{
     width:100%;
     height:100%;
-    background:url("../img/firstbanner.jpg") no-repeat 50% 50%;
+    background:url("../img/firstbanner.png") no-repeat 50% 50%;
     background-size:cover;
 }
 .firstbanner{
-
     width:1400px;
-    height:1077px;
+    height:1374px;
     margin:0 auto;
+}
+
+main{
+    position: relative;
+    border:1px solid green;
+    width:100%;
 }
 
 .topbanner2{
@@ -67,17 +73,115 @@ header{
     height:1165px;
 }
 
-/* 메인  */
+.topbanner3{
+    border:1px solid red;
+    position:absolute;
+    top:29%;
+    left:0;
+    width:100%;
+    height:604px;
+    background:url("../img/icebanner.png") no-repeat 50% 50%;
+    background-size:auto 604;
+}
 
-.mainice{
+/* 홈화면 메인컨텐츠 */
+
+.mainicecon{
     background: #F4F1ED;
     height:5165px;
     margin:0 auto;
 }   
 
-.icecon{
+/* 아이스크림이동 */
+
+.icecon1{
     width:1400px;
-    border:1px solid red;
     height:5165px;
     margin:0 auto;
+    border:1px solid red;
 }
+
+.iceproduce{
+    width:1400px;
+    height:1927px;
+    margin:0 auto;
+    padding-top:500px;
+}
+
+.iceproul{
+    border:1px solid blue;
+    width:1400px;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:flex-start;
+
+}
+.iceproul>li{
+    border:1px solid red;
+}
+
+.iceproul>li>p{
+    font-family: "yeongnam";
+    font-size:32px;
+    color:#563F35;
+}
+
+.iceproli1{
+    text-align:center;
+}
+
+.iceproul>li:nth-of-type(1){
+    width:100%;
+}
+.iceproul>li:nth-of-type(2){
+    width:50%;
+    flex:1;
+    flex-wrap:nowrap;
+   
+}
+.iceproul>li:nth-of-type(3){
+    margin-top:260px;
+    width:50%;
+    flex:1;
+
+}
+
+
+
+.iceproul img{
+    width:350px;
+}
+
+
+
+/* 매장 배달이동 */
+.stdecon{
+    width:1400px;
+    height:493px;
+
+}
+
+
+.stdecon>ul{
+    border:3px solid #E2C282;
+    display:flex;
+}
+
+.astore{
+    background:url("../img/astore.svg") no-repeat 50% 50%;
+    background-size:cover;
+    width:700px;
+    height:493px;
+}
+
+.adelivery{
+    background:url("../img/adeli.svg") no-repeat 50% 50%;
+    background-size:cover;
+    width:700px;
+    height:493px;
+}
+
+
+
+/* 컨텐츠 이름 안에  또아리 모양은 가상태그 befor after를 만들어서 백그라운드 이미지를 줄것 */

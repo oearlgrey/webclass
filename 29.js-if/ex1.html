@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>비만도 예제</title>
+    <link rel="stylesheet" href="./css/ex1.css">
 </head>
 <body>
     <h1>퀴즈</h1>
@@ -21,6 +22,7 @@
         완성예시) 당신의 키는 170cm 이고 몸무게는 70kg입니다. bmi수치는 24.2이며 과체중 입니다          
     </pre>
     <script>
+        let name = prompt("당신의 이름을 입력해주세요")
         let height = Number(prompt("키를 입력해주세요"))
         let weight = Number(prompt("몸무게를 입력해주세요"))
         let bmi = Math.round(weight/((height*0.01)*(height*0.01)))
@@ -43,10 +45,7 @@
         }else{
             bmiresult = "저체중"
         }
-
-
-
-        // if(bmi>=25){
+        // /내가 한 거/ if(bmi>=25){
         //     (bmiresult = "비만")
         // }else if(bmi>=23){
         //     (bmiresult = "과체중")
@@ -55,8 +54,27 @@
         // }else{
         //     (bmiresult = "저체중")
         // }
-        document.write(`당신의 키는 ${height}cm 이고 몸무게는 ${weight}kg입니다. bmi 수치는 ${bmi}이며 ${bmiresult}입니다 `)
-
+        //document.write(`당신의 키는 ${height}cm 이고 몸무게는 ${weight}kg입니다. bmi 수치는 ${bmi}이며 ${bmiresult}입니다 `)
+         document.write(
+        `<table class="gradestyle">
+            <caption>${name}님의 비만도 검사 결과</caption>
+            <tr>
+                <th>신장</th>
+                <td>${height}</td>
+            </tr>
+            <tr>
+                <th>체중</th>
+                <td>${weight}</td>
+            </tr>
+            <tr>
+                <th>BMI</th>
+                <td>${bmi}</td>
+            </tr>
+            <tr>
+                <th>결과</th>
+                <td>${bmiresult}</td>
+            </tr>
+        </table>`)   
     </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+table{
+border-collapse: collapse;
+}
+
+.gradestyle{
+ 
+    width:500px;
+    margin:0 auto;
+}
+.gradestyle caption{font-size:2rem;font-weight:bold;}
+.gradestyle th{border:1px solid #000; padding:5px 0; border-left:none;}
+.gradestyle td{border:1px solid #000; padding:5px 0; text-align: center;
+border-right:none;}
+
+.gradestyle tr:last-of-type>th{
+    background:#000;
+    color:#fff;
+}
+
+.gradestyle tr:last-of-type>td{
+    background:#000;
+    color:#fff;
+}
+/* table 태그 안에 tbody라는 태그가 자동으로 생성됨 그래서 gradesytle>tr 표시하면 
+상속이 되지 않음 그렇기 때문에 gradestyle tr로 표시해야 스타일이 적용됨*/
