@@ -57,7 +57,6 @@ header{
 
 main{
     position: relative;
-    border:1px solid green;
     width:100%;
 }
 
@@ -74,14 +73,13 @@ main{
 }
 
 .topbanner3{
-    border:1px solid red;
     position:absolute;
-    top:29%;
+    top:-17.5%;
     left:0;
     width:100%;
-    height:604px;
+    height:100%;
     background:url("../img/icebanner.png") no-repeat 50% 50%;
-    background-size:cover;
+    background-size:contain;
 }
 
 /* 홈화면 메인컨텐츠 */
@@ -98,7 +96,6 @@ main{
     width:1400px;
     height:5165px;
     margin:0 auto;
-    border:1px solid red;
 }
 
 .iceproduce{
@@ -109,7 +106,6 @@ main{
 }
 
 .iceproul{
-    border:1px solid blue;
     width:1400px;
     display:flex;
     flex-wrap:wrap;
@@ -118,7 +114,7 @@ main{
 
 }
 .iceproul>li{
-    border:1px solid red;
+
 }
 
 
@@ -172,12 +168,14 @@ main{
     position: absolute;
 }
 .iceproul>li:nth-of-type(2) section{
+    box-shadow: rgba(0, 0, 0, 30%) 6px 10px 8px;
     display:flex;
     align-items: center;
     justify-content: flex-end;
     width:500px;
-    height:135px;
+    height:140px;
     background:#fff;
+
     margin-left:40px;
     margin-top:180px;
 }
@@ -199,7 +197,7 @@ main{
 
 
 .iceproul img{
-    width:350px;
+    width:370px;
 }
 
 
