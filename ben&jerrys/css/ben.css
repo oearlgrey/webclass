@@ -148,14 +148,14 @@ main{
     position:absolute;
     text-align:left;
     top:42%;
-    right:9%;
+    right:7.4%;
 }
 
 .sutrapt{
     height:46px;
     position: absolute;
     top:30%;
-    right:13%;
+    right:15.5%;
 }
 
 .iceproul>li:nth-of-type(2){
@@ -166,10 +166,10 @@ main{
     flex-wrap:nowrap;
     
 }
-.mainchipimg{
+.iceproimg2{
     position: absolute;
 }
-.iceproul>li:nth-of-type(2) section{
+.iceproul>li:nth-of-type(2) section{ 
     box-shadow: rgba(0, 0, 0, 30%) 6px 10px 8px;
     display:flex;
     align-items: center;
@@ -179,7 +179,7 @@ main{
     background:#fff;
 
     margin-left:40px;
-    margin-top:180px;
+    margin-top:-200px;
 }
 
 .iceproul>li:nth-of-type(2) p{
@@ -199,17 +199,18 @@ main{
 }
 
 .chocopt{
-    border:1px solid red;
+    
     position:absolute;
-    height:105px;
-    top:20%;
-    left:40%;
+    width:286px;
+    top:19.6%;
+    left:45.5%;
 }
 
 
 
-.iceproul img{
-    width:370px;
+.iceproimg{
+    
+    width:385px;
 }
 
 
