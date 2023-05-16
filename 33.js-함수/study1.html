@@ -27,11 +27,11 @@
     <p>함수는 매개변수(재료)를 입력받을 수 있는 형태로 만들 수 있다.</p>
     <p>함수를 실행하는 실행부에서 함수명(인자)형태로 함수를 실행할 수 있다.</p>
     <script>
-        function b(name){
-            alert(name)
+        function b(name1,name2){
+            alert(name1+"와 "+name2)
         }
-        b("정현진") //인자
-        b("임규림")
+        b("정애리","임규림") //인자
+
     </script>
     <h2>매개변수의 개수는 제한이 없다.</h2>
     <script>
@@ -55,16 +55,16 @@
         // result = sumNumber(3,4) + sumNumber(4,6) // 7 + 10이 됨
         // alert(result)
         
-        function abc(){
-            return "abc"
-        }
-        //abc()+"DEF" //abcDEF가 남음
-        function genName(name){
-            document.write(name+"님 환영합니다.")
-            return name 
-        }
-        let personName = getName("정현진")
-        alert(personName)
+        // function abc(){
+        //     return "abc"
+        // }
+        // //abc()+"DEF" //abcDEF가 남음
+        // function genName(name){
+        //     document.write(name+"님 환영합니다.")
+        //     return name 
+        // }
+        // let personName = getName("정현진")
+        // alert(personName)
     </script>
 </body>
 </html>

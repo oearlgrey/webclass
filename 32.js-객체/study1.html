@@ -14,13 +14,29 @@
     <p>여기서 key값을 통해서 value의 값을 가져올 수 있으며, key는 객체 안에 소속된 변수의 형태로 만들어진다.</p>
     <p>기본형태 -> {key1:value1, key2:value2}</p>
     <p>그리고 객체의 key값에 저장되는 value는 문자, 숫자, 참거짓, 배열, 객체 등 모든 데이터형태가 저장될 수 있다.</p>
+    <!-- 객체는 , 기준으로 프로퍼티라고 불린다. 프로퍼티 안에 기능이 추가 된다면 매서드 -->
+    <!-- 다른 객체{}라면 같은 변수의 이름을 사용해도 무방하다 -->
     <script>
+        // let bbbb=[1,2,3]
+
+        // 표현법
+        // bbbb[0]
+        // bbbb[1]
+        // bbbb[2]
+        // let cccc={num1:1,num2:2,num3:3}
+        // cccc["num1"]
+        // cccc["num2"]
+        // cccc["num3"]
+        // cccc.num1 
+        // cccc.num2
+        // cccc.num3
+
         let person1 = {
             name:"정현진",
             age:38,
             gender:"남자"
             ,married:false}
-        //name -> kedy, 정현진 -> value  , -> property 속성 (특징)
+        //name -> key, 정현진 -> value  , -> property 속성 (특징)
         let person2 = ["정현진", 38, "남자", false]
 
         alert(person1["name"])
@@ -45,11 +61,11 @@
                     semester2:98
                 },
                 en:{
-                    semester1:100,
+                    semester1:90,
                     semester2:98
                 },
-                ma:{semester1:100,
-                    semester2:98
+                ma:{semester1:80,
+                    semester2:86
                 }
             
             }
