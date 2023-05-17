@@ -59,28 +59,22 @@ header{
 }
 
 .mainmenu{
-
-    width:100%;
+    width:1400px;
     height:100px;
     display:flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.mainmenu:hover{
-    height:100px;
-}
-
-
 .firmainmenu{
     display:flex;
     height:100px;
-    width:100%;
+    width:1400px;
     justify-content: space-between;
 }
 
 .firmainmenu>li{
-    border:1px solid blue;
+    border:1px solid green;
     display:flex;
     width:100%;
     align-items: center;
@@ -90,13 +84,30 @@ header{
 }
 
 .firmainmenu>li>ul{
+    background:#fff;
     border:1px solid red;
     position:absolute;
     left:0;top:100px;
     width:100%;
+    height:230px;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
+.firmainmenu>li{
+    color:#999;
+}
 
+.firmainmenu>li>ul li{
+    border:1px;
+    margin-bottom:18px;
+    font-size:0.9rem;
+}
+
+.firmainmenu>li>ul li:hover{
+    color:#000;
+
+}
 
 
 
