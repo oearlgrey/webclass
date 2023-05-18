@@ -20,17 +20,23 @@ html{
 
 /* 상단 */
 .top{
+
+    width:100%;
     margin:0 auto;
     background:#E4C486;
 }
 
 header{
     margin:0 auto;
-    width:1400px;
+    width:100%;
+
+    overflow: hidden;
+    transition:all 0.5s ease 0s;
 }
 
 .rightmenu>ul{
-    padding-top:10px;
+    padding-right:12px;
+    padding-top:12px;
     display:flex;
     justify-content: flex-end;
     align-items: center;
@@ -59,11 +65,17 @@ header{
 }
 
 .mainmenu{
-    width:1400px;
+    border-bottom:14px solid #fff;
+    width:100%;
     height:100px;
     display:flex;
     justify-content: space-around;
     align-items: center;
+    
+}
+
+header:hover{
+    height:500px;
 }
 
 .firmainmenu{
@@ -71,21 +83,23 @@ header{
     height:100px;
     width:1400px;
     justify-content: space-between;
+
 }
 
+
 .firmainmenu>li{
-    border:1px solid green;
     display:flex;
     width:100%;
     align-items: center;
     text-align: center;
     justify-content:center;
     position:relative;
+    
 }
 
 .firmainmenu>li>ul{
     background:#fff;
-    border:1px solid red;
+    border:1px solid blue;
     position:absolute;
     left:0;top:100px;
     width:100%;
@@ -111,10 +125,6 @@ header{
 
 
 
-.bar{
-    background:#fff;
-    height:14px;
-}
 
 /* 메인  */
 
@@ -130,6 +140,29 @@ header{
 .firstbanner{
     width:1400px;
     height:1374px;
+}
+
+.firstbanner>h1{
+    font-size:20rem;
+}
+
+.firstbanner>h1{
+    color:#fff;
+    font-weight:bold;
+    
+}
+
+.firstbanner>h1:nth-of-type(2){
+    color:transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-weight:bold;
+    
+}
+
+.bannerh1{
+    font-family: "sourcesans";
+    display:flex;
+    justify-content: space-between;
 }
 
 main{
