@@ -20,18 +20,10 @@ html{
 
 /* 상단 */
 .top{
-
+    height:226px;
     width:100%;
     margin:0 auto;
     background:#E4C486;
-}
-
-header{
-    margin:0 auto;
-    width:100%;
-
-    overflow: hidden;
-    transition:all 0.5s ease 0s;
 }
 
 .rightmenu>ul{
@@ -74,6 +66,14 @@ header{
     
 }
 
+header{
+    margin:0 auto;
+    width:100%;
+    height: 226px;
+    overflow: hidden;
+    transition:all 0.5s ease 0s;
+}
+
 header:hover{
     height:500px;
 }
@@ -99,13 +99,13 @@ header:hover{
 
 .firmainmenu>li>ul{
     background:#fff;
-    border:1px solid blue;
     position:absolute;
     left:0;top:100px;
     width:100%;
     height:230px;
     padding-top:10px;
     padding-bottom:10px;
+    z-index: 100;
 }
 
 .firmainmenu>li{
@@ -136,22 +136,30 @@ header:hover{
     height:100%;
     background:url("../img/firstbanner.png") no-repeat 50% 50%;
     background-size:cover;
+    position: relative;
 }
 .firstbanner{
-    width:1400px;
-    height:1374px;
+    padding-top:30px;
+    padding-bottom:30px;
+    height:1077px;
+    width:100%;
 }
 
-.firstbanner>h1{
-    font-size:20rem;
-}
-
-.firstbanner>h1{
-    color:#fff;
-    font-weight:bold;
+.firstbanner>figure{
     
+   position: absolute;
+   bottom:-4px;
+    left: 37%;
 }
 
+.firstbanner>h1{
+    border-bottom:1px solid #fff;
+    padding:45px 30px 0px 15px;
+    font-family: 'Inter', sans-serif;
+    font-size:14.2rem;
+    color:#fff;
+    font-weight:bold;    
+}
 .firstbanner>h1:nth-of-type(2){
     color:transparent;
     -webkit-text-stroke: 1px #fff;
@@ -159,33 +167,104 @@ header:hover{
     
 }
 
+.firstbanner>h1:nth-of-type(3){
+    padding-right:80px;
+}
+
+
 .bannerh1{
-    font-family: "sourcesans";
     display:flex;
     justify-content: space-between;
 }
 
-main{
-    position: relative;
-    width:100%;
-}
 
 .topbanner2{
+    margin:0 auto;
     width:100%;
     height:100%;
-    background:url("../img/secbanner.jpg") no-repeat 50% 50%;
+    background:#EAF4FE;
     background-size:cover;
 }
 
 .secbanner{
-    width:1440px;
+    margin:0 auto;
+    width:1400px;
     height:1165px;
+    padding-top:145px;
+    position: relative;
 }
 
+.secbanner>h1{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    height:120px;
+    font-size: 8rem;
+}
+.secbanner>h1:nth-of-type(1){
+    margin-left:90px;
+}
+.secbanner>h1:nth-of-type(2){
+    margin-left:211px;
+}
+.secbanner>h1:nth-of-type(3){
+    margin-left:341px;
+}
+.secbanner>h1:nth-of-type(4){
+    margin-left:506px;
+}
 
+.banner2p{
+    display:flex;
+    justify-content: flex-end;
+}
+.banner2p>p{
+    margin-top:40px;
+}
+.banner2p>p:nth-of-type(1){
+    margin-right:5px
+}
+.banner2p>p:nth-of-type(2){
+    margin-right:120px;
+}
+
+.secbanner>img{
+    position: absolute;
+    bottom:23%;
+}
+
+.brown{
+    color:#B66F27;
+}
+
+.brownborder{
+    color:transparent;
+    -webkit-text-stroke: 1px #B66F27;
+}
+
+.allbox{
+    position: absolute;
+    top:0;
+    width:100%;
+    display:flex;
+
+}
+
+.box{
+    width:466px;
+    height:1300px;
+    border-right:1px solid #ddae7f;
+}
+
+.allbox:nth-of-type(1){
+    border-left:1px solid #ddae7f;
+}
 
 /* 홈화면 메인컨텐츠 */
-
+main{
+    position: relative;
+    width:100%;
+}
 .mainicecon{
     background: #F4F1ED;
     height:5165px;
@@ -206,7 +285,24 @@ main{
 }
 
 /* 아이스크림이동 */
+.icetitle{
+    font-family: "bmjua";
+    color:232323;
+    display:flex;
+    justify-content: center;
+    text-align:center;
+    border:1px solid red;
+    font-size: 50px;
+    margin-bottom:120px;
+}
 
+.icetitle:before{
+    content:""
+    
+}
+.icetitle:after{
+    content:""
+}
 .icecon1{
     width:1400px;
     height:5165px;
@@ -217,7 +313,7 @@ main{
     width:1400px;
     height:1927px;
     margin:0 auto;
-    padding-top:500px;
+    padding-top:350px;
 }
 
 .iceproul{
