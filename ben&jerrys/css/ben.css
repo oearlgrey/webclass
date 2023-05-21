@@ -18,7 +18,7 @@ html{
     z-index: 1000;
 }
 
-/* 상단 */
+/* 상단메뉴 */
 .top{
     height:226px;
     width:100%;
@@ -124,8 +124,6 @@ header:hover{
 }
 
 
-
-
 /* 메인  */
 
 /* 상단 banner */
@@ -141,22 +139,17 @@ header:hover{
 .firstbanner{
     padding-top:30px;
     padding-bottom:30px;
-    height:1077px;
+    height:1000px;
     width:100%;
 }
 
-.firstbanner>figure{
-    
-   position: absolute;
-   bottom:-4px;
-    left: 37%;
-}
 
-.firstbanner>h1{
+
+.firstbanner h1{
     border-bottom:1px solid #fff;
     padding:45px 30px 0px 15px;
     font-family: 'Inter', sans-serif;
-    font-size:14.2rem;
+    font-size:12.5rem;
     color:#fff;
     font-weight:bold;    
 }
@@ -164,19 +157,26 @@ header:hover{
     color:transparent;
     -webkit-text-stroke: 1px #fff;
     font-weight:bold;
-    
 }
 
 .firstbanner>h1:nth-of-type(3){
-    padding-right:80px;
+    /* padding-right:80px; */
 }
 
 
 .bannerh1{
+    position: relative;
     display:flex;
     justify-content: space-between;
 }
 
+.firstbanner>img{
+    /* background-size:cover; */
+    left:36.8%;
+    width:496px;
+    bottom:0;
+    position: absolute;
+}
 
 .topbanner2{
     margin:0 auto;
@@ -284,24 +284,41 @@ main{
     object-fit: contain;
 }
 
+
+
 /* 아이스크림이동 */
-.icetitle{
+.htitlestyle{
+    display:flex;
+
+    justify-content: center;
+    text-align:center;
+}
+.htitlestyle>h1{
     font-family: "bmjua";
     color:232323;
     display:flex;
     justify-content: center;
     text-align:center;
-    border:1px solid red;
     font-size: 50px;
     margin-bottom:120px;
 }
 
-.icetitle:before{
-    content:""
-    
+.htitlestyle:before{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    content:"";
+    background:url("../img/lineleft.svg") no-repeat 50% 50%;
+    margin-right:12px;
 }
-.icetitle:after{
-    content:""
+.htitlestyle:after{
+    display:inline-block;
+    content:"";
+    width:50px;
+    height:50px;
+    background:url("../img/lineright.svg") no-repeat 50% 50%;
+    margin-left:12px;
+
 }
 .icecon1{
     width:1400px;
@@ -331,7 +348,7 @@ main{
 
 .font32{
     font-family: "yeongnam";
-    font-size:30px;
+    font-size:26px;
     color:#563F35;
 }
 
@@ -339,8 +356,7 @@ main{
     text-align:center;
 }
 
-
-.iceproul>li:nth-of-type(1){
+.iceproli1{
     position: relative;
     width:100%;
     flex-wrap:nowrap;
@@ -355,11 +371,12 @@ main{
     top:0%;
     left:45%;
 }
-.iceproul>li:nth-of-type(1) p{
+
+.iceproli1 p{
     position:absolute;
     text-align:left;
     top:42%;
-    right:7.4%;
+    right:11.4%;
 }
 
 .sutrapt{
@@ -369,18 +386,14 @@ main{
     right:15.5%;
 }
 
-.iceproul>li:nth-of-type(2){
-
+.iceproli2{
     position:relative;
     width:50%;
     flex:1;
     flex-wrap:nowrap;
-    
 }
-.iceproimg2{
-    position: absolute;
-}
-.iceproul>li:nth-of-type(2) section{ 
+
+.iceproli2 section{ 
     box-shadow: rgba(0, 0, 0, 30%) 6px 10px 8px;
     display:flex;
     align-items: center;
@@ -393,46 +406,106 @@ main{
     margin-top:-200px;
 }
 
-.iceproul>li:nth-of-type(2) p{
+.iceproli2 p{
     text-align:left;
-    margin-right:15px;
-    
-}
-.iceproul>li:nth-of-type(3){
-    margin-top:260px;
-    width:50%;
-    flex:1;
-    text-align:right;
-}
-
-.iceproli2{
-    position: relative;
+    margin-right:15px;   
 }
 
 .chocopt{
-    
     position:absolute;
     width:286px;
-    top:19.6%;
+    top: 22.5%;
     left:45.5%;
 }
 
+/* 세번째  */
+.iceproli3{
+    margin-top:260px;
+    flex-wrap:nowrap;
+    width:50%;
+    flex:1;
+    text-align:right;
+    position: relative;
+}
 
+.iceproli3 section{ 
+    box-shadow: rgba(0, 0, 0, 30%) 6px 10px 8px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    width:500px;
+    height:140px;
+    background:#fff;
 
+    margin-left:170px;
+    margin-top:-200px;
+}
+
+.iceproli3 p{
+    text-align:left;
+    margin-right:244px;
+}
+
+.chunkypt{
+    top: 51%;
+    left: 17%;
+    position:absolute;
+    width:286px;
+}
 .iceproimg{
-    
     width:385px;
 }
 
+.iceproli4{
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:680px;
+}
+
+.fingerpoint{
+    position: absolute;
+    height:111px;
+    top:10%;
+    animation: motion 0.3s /* 속도 */
+               linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+               infinite alternate; /* 무한 반복 */
+}
+  @keyframes motion {
+	0% {margin-top: 0px;} /* 처음 위치 */
+	100% {margin-top: 10px;} /* 마지막 위치*/
+}
+
+.more{
+    height:183px;
+    margin-top: -14%;
+}
 
 
 /* 매장 배달이동 */
 .stdecon{
     width:1400px;
     height:493px;
-
 }
 
+.stdecon h1{
+    margin-top: 115px;
+    background:#fff;
+    border-radius:20px;
+    padding:10px 57px;
+    font-family: "bmjua";
+    font-size: 48px;
+}
+
+.stdecon p{
+    margin-top:10px;
+    font-family: "paybook";
+    font-size: 20px;
+    color: #6DA2B2;
+}
 
 .stdecon>ul{
     border:3px solid #E2C282;
@@ -440,17 +513,41 @@ main{
 }
 
 .astore{
+    border:1px solid red;
     background:url("../img/astore.svg") no-repeat 50% 50%;
     background-size:cover;
     width:700px;
     height:493px;
 }
 
+.stdecon section{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.search{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.search:after{
+    
+    display:inline-block;
+    content: "";
+    width: 40px;
+    height:40px;
+    margin-left:10px;
+    background:url("../img/searchblue.svg") no-repeat 50% 50%;
+}
 .adelivery{
     background:url("../img/adeli.svg") no-repeat 50% 50%;
     background-size:cover;
     width:700px;
     height:493px;
+}
+.adelivery h1{
+    background:#CAECFC;
 }
 
 
