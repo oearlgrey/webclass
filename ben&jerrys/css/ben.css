@@ -160,7 +160,7 @@ header:hover{
 }
 
 .firstbanner>h1:nth-of-type(3){
-    /* padding-right:80px; */
+    padding-right:100px;
 }
 
 
@@ -200,6 +200,9 @@ header:hover{
     text-align: center;
     height:120px;
     font-size: 8rem;
+    position: relative;
+    z-index: 1000;
+    /* position이 있어야 인덱스 가능 */
 }
 .secbanner>h1:nth-of-type(1){
     margin-left:90px;
@@ -266,6 +269,8 @@ main{
     width:100%;
 }
 .mainicecon{
+    
+    width:100%;
     background: #F4F1ED;
     height:5165px;
     margin:0 auto;
@@ -322,7 +327,7 @@ main{
 }
 .icecon1{
     width:1400px;
-    height:5165px;
+    height: 2775px;
     margin:0 auto;
 }
 
@@ -513,7 +518,6 @@ main{
 }
 
 .astore{
-    border:1px solid red;
     background:url("../img/astore.svg") no-repeat 50% 50%;
     background-size:cover;
     width:700px;
@@ -551,5 +555,67 @@ main{
 }
 
 
+.fbanner1{
+    margin:0 auto;
+    width:100%;
+    height:604px;
+    background:#EAE4DF;
+    margin-top:430px;
+    position: relative;
+}
 
+.fbanner1>section{
+    flex-wrap: wrap;
+    display:flex;
+    align-items: center;
+    position: absolute;
+    left:0;
+    top:-20%;
+}
+
+.fbanner1>section>h1{
+    font-family: "sourcesans";
+    color:#563F35;
+    font-size:23.5rem;
+    font-weight:650;
+    margin-left:10px;
+    margin-right:20px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    border:1px solid red;
+    height:270px;
+}
+
+.fbanner1>section>h1:nth-of-type(1){
+    color:transparent;
+    -webkit-text-stroke: 1px #000;
+}
+
+.fbanner1>section>h1:nth-of-type(4){
+    color:transparent;
+    -webkit-text-stroke: 1px #000;
+} 
+
+.fbanner1>section>h1:nth-of-type(2){
+    width:300px;
+}
+
+.icewithpt1{
+    width:360px;
+    margin-right:20px;
+    object-fit: cover;
+    margin-top: 14px;
+}
+.icewithpt2{
+    height:220px;
+    margin-right:20px;
+    object-fit: cover;
+}
+
+.fbanner2{
+    border:1px solid blue;
+    width:100%;
+    height:1200px;
+}
 /* 컨텐츠 이름 안에  또아리 모양은 가상태그 befor after를 만들어서 백그라운드 이미지를 줄것 */
