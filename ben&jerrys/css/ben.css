@@ -272,7 +272,7 @@ main{
     
     width:100%;
     background: #F4F1ED;
-    height:5165px;
+    height:5000px;
     margin:0 auto;
     position:relative;
 }   
@@ -616,6 +616,30 @@ main{
 .fbanner2{
     border:1px solid blue;
     width:100%;
-    height:1200px;
+    height:1192px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
+
+footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "paybook";
+    font-size:1.5rem;
+    font-weight:bold;
+    width:100%;
+    height:180px;
+    background:#EADCBB
+}
+
+.fleft>ul{
+    display:flex;
+    padding-left:70px;
+}
+.fleft>ul>li{
+    margin-right:70px;
+}
+
 /* 컨텐츠 이름 안에  또아리 모양은 가상태그 befor after를 만들어서 백그라운드 이미지를 줄것 */
