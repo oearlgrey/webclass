@@ -16,6 +16,7 @@ html{
     margin:0 auto;
     position: relative;
     z-index: 1000;
+    /* z인덱스는 형제끼리 비교하는 것이 원칙 */
 }
 
 /* 상단메뉴 */
@@ -57,7 +58,7 @@ html{
 }
 
 .mainmenu{
-    border-bottom:14px solid #fff;
+    border-bottom:1px solid #fff;
     width:100%;
     height:100px;
     display:flex;
@@ -69,7 +70,7 @@ html{
 header{
     margin:0 auto;
     width:100%;
-    height: 226px;
+    height: 215px;
     overflow: hidden;
     transition:all 0.5s ease 0s;
 }
@@ -474,7 +475,7 @@ main{
 .fingerpoint{
     position: absolute;
     height:111px;
-    top:10%;
+    top:24%;
     animation: motion 0.3s /* 속도 */
                linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
                infinite alternate; /* 무한 반복 */
@@ -484,9 +485,12 @@ main{
 	100% {margin-top: 10px;} /* 마지막 위치*/
 }
 
+.iceproli4>a{
+    height:183px;
+}
 .more{
     height:183px;
-    margin-top: -14%;
+    /* margin-top: -14%; */
 }
 
 
@@ -554,6 +558,13 @@ main{
     background:#CAECFC;
 }
 
+.topbtn{
+    width:40px;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	z-index:999;
+}
 
 .fbanner1{
     margin:0 auto;
@@ -578,7 +589,6 @@ main{
     color:#563F35;
     font-size:23.5rem;
     font-weight:650;
-    margin-left:10px;
     margin-right:20px;
     display:flex;
     align-items: center;
@@ -609,18 +619,19 @@ main{
 }
 .icewithpt2{
     height:220px;
-    margin-right:20px;
+    margin-top:25px;
     object-fit: cover;
 }
 
 .fbanner2{
-    border:1px solid blue;
+
     width:100%;
-    height:1192px;
+    height:1190px;
     display:flex;
     justify-content: center;
     align-items: center;
 }
+
 
 footer{
     display:flex;
@@ -642,4 +653,15 @@ footer{
     margin-right:70px;
 }
 
+.fright>ul{
+    display:flex;
+    padding-right:70px;
+}
+
+.fright>ul>li{
+    margin-left:20px;
+}
+.fright img{
+    width:45px;
+}
 /* 컨텐츠 이름 안에  또아리 모양은 가상태그 befor after를 만들어서 백그라운드 이미지를 줄것 */

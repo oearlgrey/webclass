@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <div class="top">
-            <header>
+            <header id="header">
                 <nav class="rightmenu">
                     <ul>
                         <li>
@@ -148,7 +148,7 @@
                             </li>
                             <li class="iceproli4">
                                 <img class="fingerpoint" src="./img/point.png" alt="손가락 이미지">
-                                <img class="more" src="./img/more.png" alt="더보기 이미지">  
+                                <a href="#"><img class="more" src="./img/more.png" alt="더보기 이미지"></a>
                             </li>
                         </ul>
                     </section>
@@ -156,14 +156,18 @@
                         <ul>
                             <li class="astore">
                                 <section>
-                                    <h1 class="search">가까운 매장 찾기</h1>
-                                    <p>가까운 매장에서 다양한 맛을 즐겨보세요!</p>
+                                    <a href="#">
+                                        <h1 class="search">가까운 매장 찾기</h1>
+                                        <p>가까운 매장에서 다양한 맛을 즐겨보세요!</p>
+                                    </a>
                                 </section>    
                             </li>
                             <li class="adelivery">
                                 <section>
-                                    <h1>배달 어플로 주문하기</h1>
-                                    <p>나만의 장소에서 달콤한 시간을 가져보세요!</p>
+                                    <a href="#">
+                                        <h1>배달 어플로 주문하기</h1>
+                                        <p>나만의 장소에서 달콤한 시간을 가져보세요!</p>
+                                    </a>
                                 </section>   
                             </li>
                         </ul>
@@ -179,18 +183,23 @@
                     <img src="./img/footchoco.png" alt="아이스크림 이미지">
                 </div>      
             </div>
+            <a href="#header"><img class="topbtn "src="./img/topbtn.png" alt="상단이동 이미지"></a>
         </main>
         <footer>
             <section class="fleft">
                 <ul>
-                    <li>문의하기</li>
-                    <li>개인정보보호정책</li>
-                    <li>개인정보</li>
-                    <li>사이트맵</li>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">개인정보보호정책</a></li>
+                    <li><a href="#">개인정보</a></li>
+                    <li><a href="#">사이트맵</a></li>
                 </ul>
             </section>
             <section class="fright">
-
+                <ul>
+                    <li><a href="#"><img src="./img/twtlogo.svg" alt="트위터 로고 이미지"></li>
+                    <li><a href="#"><img src="./img/facelogo.svg" alt="페이스북 로고 이미지"></a></li>
+                    <li><a href="#"><img src="./img/inslogo.svg" alt="인스타로고 이미지"></a></li>
+                </ul>
             </section>
         </footer>
     </div>
