@@ -33,6 +33,7 @@ html{
     display:flex;
     justify-content: flex-end;
     align-items: center;
+    
 }
 .rightmenu img{
     height:25px;
@@ -51,11 +52,6 @@ html{
     justify-content: center;
     align-items: center;
 }
-.firmainmenu>li>a{
-    font-family: "bmjua";
-    font-size:30px;
-    color:#fff;
-}
 
 .mainmenu{
     border-bottom:1px solid #fff;
@@ -71,13 +67,18 @@ header{
     margin:0 auto;
     width:100%;
     height: 215px;
-    overflow: hidden;
-    transition:all 0.5s ease 0s;
+    /* overflow: hidden; */
 }
 
-header:hover{
-    height:500px;
+.firmainmenu>li>a{
+    font-family: "bmjua";
+    font-size:30px;
+    color:#fff;
 }
+
+.firmainmenu>li>a:hover{
+    color:#B66F27;
+} 
 
 .firmainmenu{
     display:flex;
@@ -95,29 +96,42 @@ header:hover{
     text-align: center;
     justify-content:center;
     position:relative;
-    
 }
 
+
+
 .firmainmenu>li>ul{
+    transition:all 0.5s ease 0s;
+    overflow:hidden;
     background:#fff;
     position:absolute;
     left:0;top:100px;
     width:100%;
-    height:230px;
-    padding-top:10px;
-    padding-bottom:10px;
+    height:0px;
+     /* 보이게 하고 싶으면 높이 줄 것  */
     z-index: 100;
 }
 
-.firmainmenu>li{
-    color:#999;
+.firmainmenu>li:hover>ul.firmain1{
+    height:180px;
 }
 
-.firmainmenu>li>ul li{
-    border:1px;
+.firmainmenu>li:hover>ul.firmain2{
+    height:140px;
+}
+
+.firmainmenu>li:hover>ul.firmain3{
+    height:100px;
+}
+
+
+.firmainmenu>li>ul>li{
+    color:#999;
+    margin-top:18px;
     margin-bottom:18px;
     font-size:0.9rem;
 }
+
 
 .firmainmenu>li>ul li:hover{
     color:#000;
@@ -295,11 +309,8 @@ main{
 /* 아이스크림이동 */
 .htitlestyle{
     display:flex;
-
     justify-content: center;
     text-align:center;
-}
-.htitlestyle>h1{
     font-family: "bmjua";
     color:232323;
     display:flex;
@@ -486,7 +497,7 @@ main{
 }
 
 .iceproli4>a{
-    height:183px;
+   
 }
 .more{
     height:183px;
@@ -497,10 +508,18 @@ main{
 /* 매장 배달이동 */
 .stdecon{
     width:1400px;
-    height:493px;
 }
 
-.stdecon h1{
+.astore h1{
+    margin-top: 115px;
+    background:#fff;
+    border-radius:20px;
+    padding:10px 57px;
+    font-family: "bmjua";
+    font-size: 48px;
+}
+
+.adelivery h1{
     margin-top: 115px;
     background:#fff;
     border-radius:20px;
@@ -526,12 +545,14 @@ main{
     background-size:cover;
     width:700px;
     height:493px;
+    box-sizing: border-box;
 }
 
-.stdecon section{
+.stdecon section>a{
     display:flex;
     flex-direction:column;
     align-items: center;
+    
 }
 
 .search{
@@ -553,6 +574,7 @@ main{
     background-size:cover;
     width:700px;
     height:493px;
+    box-sizing: border-box;
 }
 .adelivery h1{
     background:#CAECFC;
@@ -571,7 +593,7 @@ main{
     width:100%;
     height:604px;
     background:#EAE4DF;
-    margin-top:430px;
+    margin-top:600px;
     position: relative;
 }
 
@@ -593,7 +615,6 @@ main{
     display:flex;
     align-items: center;
     text-align: center;
-    border:1px solid red;
     height:270px;
 }
 
@@ -624,9 +645,8 @@ main{
 }
 
 .fbanner2{
-
     width:100%;
-    height:1190px;
+    height:1018px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -642,7 +662,7 @@ footer{
     font-weight:bold;
     width:100%;
     height:180px;
-    background:#EADCBB
+    background:#EADCBB;
 }
 
 .fleft>ul{
