@@ -21,7 +21,7 @@ html{
 
 /* 상단메뉴 */
 .top{
-    height:226px;
+    height:222px;
     width:100%;
     margin:0 auto;
     background:#E4C486;
@@ -39,9 +39,19 @@ html{
     height:25px;
 }
 
+#lang{
+    width:80px;
+    height:36px;
+    background: transparent;
+    background:url("../img/korea.svg")20% 50% no-repeat;
+    background-size: 30px auto;
+}
+
 .rightmenu>ul>li:nth-of-type(1){
     margin-right:10px;
 }
+
+
 .logoarea img{
     width: 200px;
 }
@@ -66,7 +76,7 @@ html{
 header{
     margin:0 auto;
     width:100%;
-    height: 215px;
+    height: 222px;
     /* overflow: hidden; */
 }
 
@@ -271,11 +281,11 @@ header{
 .box{
     width:466px;
     height:1300px;
-    border-right:1px solid #ddae7f;
+    border-right:1px solid #E4C486;
 }
 
 .allbox:nth-of-type(1){
-    border-left:1px solid #ddae7f;
+    border-left:1px solid #E4C486;
 }
 
 /* 홈화면 메인컨텐츠 */
@@ -685,3 +695,42 @@ footer{
     width:45px;
 }
 /* 컨텐츠 이름 안에  또아리 모양은 가상태그 befor after를 만들어서 백그라운드 이미지를 줄것 */
+
+
+/* ================서브페이지1 - 아이스크림 메뉴 ==================== */
+
+.subcontainer{
+    margin:0 auto;
+    z-index: 1000;
+}
+
+.sub1top{
+    width:100%;
+    height:222px;
+    margin:0 auto;
+    background:#8CCFF9;
+}
+
+.sub1header{
+
+    margin:0 auto;
+    width:100%;
+    height:222px;
+}
+
+
+
+/* 메뉴단 스타일 */
+.mainmenu{
+    border-bottom:1px solid #fff;
+    width:100%;
+    height:100px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+
+.firmainmenu.subfir>li>a:hover{
+    color:#38b7f7;
+} 

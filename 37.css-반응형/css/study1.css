@@ -1,0 +1,28 @@
+*{margin:0;padding:0;}
+ol,ul{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal;}
+a{text-decoration:none;color:inherit;}
+
+
+
+@media (min-width:1024px){
+    /* 화면의 너비가 최소 1024 픽셀 이상인 경우 적용될 스타일 */
+    
+    .frame{
+        background:red;
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px){
+    /* 화면의 너비가 최소 768 이상이고 최대 1023 픽셀 미만인 경우 적용될 스타일 */
+    .frame{
+        background:blue;
+    }
+}
+
+@media (max-width:767px){
+    .frame{
+        background:green;
+    }
+
+}
