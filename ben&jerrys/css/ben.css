@@ -21,7 +21,7 @@ html{
 
 /* 상단메뉴 */
 .top{
-    height:222px;
+    height:auto;
     width:100%;
     margin:0 auto;
     background:#E4C486;
@@ -46,6 +46,13 @@ html{
     background:url("../img/korea.svg")20% 50% no-repeat;
     background-size: 30px auto;
 }
+#lang option{
+    display:inline-block;
+    width:80px;
+    height:36px;
+    background: transparent;
+    background:url("../img/korea.svg")20% 50% no-repeat;
+}
 
 .rightmenu>ul>li:nth-of-type(1){
     margin-right:10px;
@@ -57,6 +64,7 @@ html{
 }
 
 .logoarea{
+    margin-bottom:30px;
     padding-top:10px;
     display:flex;
     justify-content: center;
@@ -64,6 +72,7 @@ html{
 }
 
 .mainmenu{
+
     border-bottom:1px solid #fff;
     width:100%;
     height:100px;
@@ -74,9 +83,12 @@ html{
 }
 
 header{
+
     margin:0 auto;
     width:100%;
-    height: 222px;
+    height:auto;
+    position: relative;
+    z-index: 101;
     /* overflow: hidden; */
 }
 
@@ -297,7 +309,8 @@ main{
     
     width:100%;
     background: #F4F1ED;
-    height:5000px;
+    height:auto; 
+    /* 5000px */
     margin:0 auto;
     position:relative;
 }   
@@ -349,7 +362,8 @@ main{
 }
 .icecon1{
     width:1400px;
-    height: 2775px;
+    height: auto;
+    /* 2775px; */
     margin:0 auto;
 }
 
@@ -706,16 +720,15 @@ footer{
 
 .sub1top{
     width:100%;
-    height:222px;
+    height:auto;
     margin:0 auto;
     background:#8CCFF9;
 }
 
 .sub1header{
-
     margin:0 auto;
     width:100%;
-    height:222px;
+    height:auto;
 }
 
 
@@ -728,9 +741,75 @@ footer{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    
+}   
 
 
 .firmainmenu.subfir>li>a:hover{
     color:#38b7f7;
-} 
+}
+
+header>.submainmenu{
+    border-bottom:0;
+    border-top:1px solid #fff;
+}
+
+.sub1main{
+    width:100%;
+    height:6838px;
+    background:#F4F1ED;
+}
+
+.sub1main>h1{
+    margin-top:205px;
+    text-align: center;
+}    
+
+.icemenulist{
+    border:2px solid #d1cdcd;
+    box-sizing: border-box;
+    margin:0 auto;
+    margin-top:205px;
+    width:1400px;
+    height:4193px;
+    background:#fff;
+    padding:50px;
+}
+
+.pintmenu{
+}
+
+.pint{
+    border:1px solid red;
+    display:flex;
+    justify-content: space-between;
+    height:524px;
+    padding-top:48px;
+}
+
+.pint>li{
+    height:524px;
+    border:1px solid red;
+    /* border-bottom:1px solid #D6D6D6; */
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pint>li>h1{
+    margin-top:30px;
+    font-family: "paybook";
+    color:black;
+    font-size:34px;
+    font-weight: bold;
+}
+
+.pint>li>p{
+    margin-top:20px;
+    margin-bottom:50px;
+}
+.pint>li>img{
+    margin:0 auto;
+    width:320px;
+    border:1px solid red;
+}
