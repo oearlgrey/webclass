@@ -785,13 +785,13 @@ header>.submainmenu{
     display:flex;
     justify-content: space-between;
     flex-wrap:wrap;
-    height:524px;
+    height:490px;
     padding-top:48px;
 }
 
 .pint>li{
-    width:calc(100%/3);
-    height:524px;
+    /* width:calc(100%/3); */
+    height:100%;
     /* border:1px solid red; */
     border-bottom:1px solid #D6D6D6;
     display:flex;
@@ -819,10 +819,7 @@ header>.submainmenu{
     font-family: "paybook";
     color:#8b8b8b;
 }
-.pint img.cherry{
-    border:1px solid blue;
-    width:280px;
-}
+
 .pint>li>img{
     margin:0 auto;
     width:320px;
