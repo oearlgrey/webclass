@@ -266,6 +266,7 @@
 
     .culture{
         position: relative;
+        width:1440px;
         padding-top:70px;
         padding-bottom:70px;
     }
