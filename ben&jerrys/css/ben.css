@@ -340,7 +340,6 @@ main{
     justify-content: center;
     text-align:center;
     font-size: 50px;
-    margin-bottom:120px;
 }
 
 .htitlestyle:before{
@@ -781,21 +780,21 @@ header>.submainmenu{
 }
 
 .pint{
-    border:1px solid red;
+    width:100%;
     display:flex;
     justify-content: space-between;
     flex-wrap:wrap;
-    height:490px;
-    padding-top:48px;
+  
 }
 
 .pint>li{
-    /* width:calc(100%/3); */
-    height:100%;
+    overflow: hidden;
+    width:calc(100%/3);
+    box-sizing: border-box;
+   height:490px;
     /* border:1px solid red; */
     border-bottom:1px solid #D6D6D6;
     display:flex;
-    flex:1;
     flex-direction: column;
     text-align: center;
 }
@@ -804,53 +803,174 @@ header>.submainmenu{
     position: relative;
 }
 
-.pint>li>h1{
-    margin-top:55px;
-    margin-bottom:38px;
+.pint>li>h1 {
+    /* margin-top: 55px; */
+    /* margin-bottom: 38px; */
     font-family: "paybook";
-    color:black;
-    font-size:34px;
+    color: black;
+    font-size: 2.2rem;
     font-weight: bold;
+    height: 110px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.pint>li>p{
-
-    margin-bottom: 40px;
+.pint>li>p {
+    margin-bottom: 28px;
     font-family: "paybook";
-    color:#8b8b8b;
+    font-size: 1rem;
+    color: #8b8b8b;
+    flex-shrink: 0;
+    height: 40px;
 }
 
 .pint>li>img{
     margin:0 auto;
-    width:320px;
-}
-.pint>li:nth-of-type(6)>p{
-    margin-bottom:58px;
+    width:300px;
+    object-fit: contain;
 }
 
-.pint>li>h2{
+.pint>li:nth-of-type(9)>h1{
+    font-size:1.8rem;
+}
+.pint>li:nth-of-type(12)>img{
+    width:250px;
+}
+
+.includenew>h2{
     font-size:2.8rem;
     color:#EFB718;
     font-family: "bmjua";
     position:absolute;
     left:50%;
-    top:38%;
+    top: 34%;
     transform: translateX(-50%);
 }
-.mini{
-    display:flex;
-    justify-content: space-between;
-    height:524px;
-    padding-top:48px;
-}
-.mini>li{
-    display:524px;
-    flex:1;
-    justify-content: space-between;
-    height:524px;
-    padding-top:48px;
+
+.continued>h2{
+    margin-top: 104px;
+    margin-bottom: 94px;
+    font-size:2.4rem;
+    color:#EFB718;
+    font-family: "bmjua";
 }
 
-.pint>li:nth-of-type(9)>p{
-    margin-bottom:26px;
+.mini{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+
+}
+
+
+.mini>li{
+    width:calc(100%/4);
+    height:490px;
+    /* border:1px solid red; */
+    border-bottom:1px solid #D6D6D6;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* 
+.mini>li>*{flex-shrink: 0;;} */
+
+
+.mini_txt{
+    height:130px;
+    margin-bottom: 50px;
+}
+
+.mini>li>img{
+    width:280px;
+}
+
+.mini_txt>h1{
+   /* margin-top: 55px; */
+    /* margin-bottom: 38px; */
+    font-family: "paybook";
+    color: black;
+    font-size: 2.2rem;
+    font-weight: bold;
+    height: 110px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mini_txt>p{
+    /* margin-bottom: 40px; */
+    font-size:1rem;
+    font-family: "paybook";
+    color:#8b8b8b;
+}
+
+.scoopice{
+    width:100%;
+    border:1px solid red;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+
+}
+
+.scoopice>li{
+    width:calc(100%/4);
+    height:490px;
+    border:1px solid red;
+    border-bottom:1px solid #D6D6D6;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.scoopice>li h1{
+   /* margin-top: 55px; */
+    /* margin-bottom: 38px; */
+    font-family: "paybook";
+    color: black;
+    font-size: 2.2rem;
+    font-weight: bold;
+    height: 130px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoopice>li p{
+    border:1px solid red;
+    font-size:1rem;
+    font-family: "paybook";
+    color:#8b8b8b;
+}
+
+.scoop_txt{
+    border:1px solid blue;
+    height:130px;
+
+}
+
+/* ------------매장서브 */
+.sub2main{
+    background: #F4F1ED;
+    height:4374px;
+}
+
+.storelist{
+    margin:0 auto;
+    width:1400px;
+    height:3510px;
+    background:#fff;
+}
+
+.sub2main>h1{
+    
 }

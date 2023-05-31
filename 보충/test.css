@@ -1,0 +1,47 @@
+*{margin:0;padding:0;}
+html,body{
+    width:auto;
+}
+.box{
+    border:10px solid red;
+    width:auto;
+    height:400px;
+}
+.box>h1{
+    border:1px solid blue;
+    
+    /* 높이는 너비와 다르게 상속되지않으며, %단위를 쓰게된다면 부모태그에 적용된 높이가 명확하게 설정되어있어야 한다. */
+}
+.box>p{
+    border:1px solid green;
+    padding:300px 0;
+}
+
+.flexbox{
+    width:500px;
+    margin:0 auto;
+    border:1px solid blue;
+    display:flex;
+    flex-wrap: wrap;
+    
+    /* justify-content: center; */
+    /* align-item: center; */
+    /* align-content: center; */
+    /* flex-wrap: wrap; */
+
+    /* align-items 줄바꿈을 허용하지 않았을 때 아이템들이 무조건 한행으로 나란히 배치되는데 이 때 한행기준 수직축 정렬 (아이템의 줄바꿈을 허용한다면 여러행이 나타났을 때 플렉스 컨테이너의 높이에서 행을 나눈만큼의 각행의 높이 기준 수직축 정렬)*/
+
+    
+    /* align-content 전체 플렉스 컨테이너 높이를 기준으로 해서 수직축 정렬을 전체아이템을  중앙에 배치 (줄바꿈을 허용해서 여러행이 나타났을 때 아이템을 전체 수직축기준 중앙에 몰아넣고싶을 때 사용)*/
+}
+.flexbox>section{
+    border:1px solid red;
+    /* width:120px; */
+    width:33.333%;
+    flex-grow:1;
+    box-sizing: border-box;
+}
+.flexbox>section:nth-of-type(1){
+    /* flex-shrink: 0; */
+    /* flex-grow: 0; */
+}
