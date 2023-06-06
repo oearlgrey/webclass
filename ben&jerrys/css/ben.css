@@ -340,6 +340,7 @@ main{
     justify-content: center;
     text-align:center;
     font-size: 50px;
+    margin-bottom: 50px;
 }
 
 .htitlestyle:before{
@@ -755,8 +756,9 @@ header>.submainmenu{
 }
 
 .sub1main{
-    width:100%;
-    height:6838px;
+    margin:0 auto; 
+   width:100%;
+    height:6400px;
     background:#F4F1ED;
 }
 
@@ -766,14 +768,16 @@ header>.submainmenu{
 }    
 
 .icemenulist{
+    position:relative;
+    box-sizing: border-box;
     border:2px solid #d1cdcd;
     box-sizing: border-box;
     margin:0 auto;
     margin-top:205px;
     width:1400px;
-    height:4193px;
+    height: 3922px;
     background:#fff;
-    padding:50px;
+    /* padding:50px; */
 }
 
 .pintmenu{
@@ -913,21 +917,23 @@ header>.submainmenu{
 
 .scoopice{
     width:100%;
-    border:1px solid red;
     display:flex;
     justify-content: space-between;
     flex-wrap:wrap;
 
 }
 
+.scoopice>li>img{
+    width:220px;
+}
 .scoopice>li{
     width:calc(100%/4);
     height:490px;
-    border:1px solid red;
     border-bottom:1px solid #D6D6D6;
     display:flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     box-sizing: border-box;
 }
 
@@ -946,31 +952,279 @@ header>.submainmenu{
 }
 
 .scoopice>li p{
-    border:1px solid red;
     font-size:1rem;
     font-family: "paybook";
     color:#8b8b8b;
 }
 
+.scoopice>li:nth-of-type(9){
+    border-bottom:none;
+}
+
+.scoopice>li:nth-of-type(10){
+    border-bottom:none;
+}
+
+.scoopice>li:nth-of-type(11){
+    border-bottom:none;
+}
+.scoopice>li:nth-of-type(12){
+    border-bottom:none;
+}
 .scoop_txt{
-    border:1px solid blue;
     height:130px;
 
 }
 
+.freeconeday{
+    position: relative;
+    font-family: "yeongnam";
+    font-size:5.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:400px;
+}
+
+.freeconeday>img {
+    position: absolute;
+    top: 37%;
+    left: 34%;
+    width: 719px;
+}
+
+.freeconeday>h1{
+    position: relative;
+    z-index: 10;
+}
+
+
+.freeconeday>h1 i{
+    font-size:8.5rem;
+    color:#7C5D55;
+}
+.freeconeday>h1 b{
+    font-size:7.5rem;
+    color:#7C5D55;
+}
+
+.freeconeday>h2>i{
+    font-size:6.5rem;
+    color:#E6BD84;
+
+}
+
+.randomarea{
+    position:relative;
+}
+
+.randomarea>img{
+    position: absolute;
+    top: 38%;
+    right: 32%;
+}
+
+.randomimgani {
+    margin:0 auto;
+    width: 250px;
+    height: 380px;
+    background: url('../img/randoms.png') 0 0 no-repeat;
+    animation: randomice 4s infinite steps(12);
+}
+
+ @keyframes randomice {
+    100% {
+    	background-position: -3000px 0;
+    }
+}
+
+.randomimgani:hover{
+    animation-play-state:paused;
+  }
+
+.pintsign{
+    position: absolute;
+    top:0%;
+    left: -78px;
+    writing-mode: vertical-lr;
+    width:78px;
+    height:149px;
+    font-family: "bmjua";
+    font-size:2.8rem;
+    background:#D3C1AB;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minisign{
+    position: absolute;
+    top: 50%;
+    right: -78px;
+    writing-mode: vertical-lr;
+    width:78px;
+    height:149px;
+    font-family: "bmjua";
+    font-size:2.8rem;
+    background:#D3C1AB;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.scoopsign{
+    position: absolute;
+    top: 2939px;
+    left: -78px;
+    writing-mode: vertical-lr;
+    width:78px;
+    height:149px;
+    font-family: "bmjua";
+    font-size:2.8rem;
+    background:#D3C1AB;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scoopsign2{
+    position: absolute;
+    top: 3062px;
+    left: -180px;
+}
 /* ------------매장서브 */
 .sub2main{
     background: #F4F1ED;
+    width:100%;
     height:4374px;
 }
 
-.storelist{
+.arealist{
     margin:0 auto;
     width:1400px;
     height:3510px;
     background:#fff;
 }
 
+.arealist>section{
+    border:1px solid red;
+    margin-bottom:200px;
+    display: flex;
+    align-items: center;
+}
+.arealist>section>h1{
+    font-family: "paybook";
+    font-size: 2rem;
+    font-weight:bold;
+    margin-left:50px;
+    padding-top:50px;
+}
+.arealist>section span{
+    font-size: 1.5rem;
+    border: 1px solid #D3C1AB;
+    display: inline-block;
+    /*또는 inline-flex */
+    align-items: center;
+    justify-content: center;
+    /* width: 212px; */
+    /* height: 70px; */
+    vertical-align: middle;
+    padding: 7px 40px;
+    margin: 0 18px;
+}
+
 .sub2main>h1{
-    
+    padding-top:200px;
+    margin-bottom:56px;
+}
+
+.sub2main>p{
+    font-family:"paybook";
+    font-size:1.8rem;
+    margin-bottom:112px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.stform>ul{
+
+}
+.stform li{
+    width:100%;
+    height:200px;
+}
+
+.st_left>img{
+    width:140px;
+    padding-right:80px;
+
+
+}
+.storelist>li{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom:1px solid #EAE7E4;
+}
+
+.st_left{
+    display:flex;
+    width:580px;
+    border:1px solid red;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+.storeinfo{
+    display:flex;
+    flex-direction: column;
+}
+.storeinfo>h1{
+    font-family: "bmjua";
+    font-size:2.2rem;
+    margin-bottom:20px;
+}
+
+.storeinfo>p{
+
+    font-family: "paybook";
+    font-size:1.6rem;
+}
+
+
+.st_right{
+    padding-right: 50px;
+}
+
+.st_right>ul{
+    border:1px solid blue;
+    display: flex;
+    justify-content: flex-start;
+}
+.st_right>ul img{
+    width:70px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.st_right li{
+    border:1px solid red;
+    width:140px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.st_right li>p{
+    font-family: "paybook";
+    font-weight:bold;
+    font-size:1.1rem;
+    color:#A3A19F;
 }
