@@ -39,7 +39,7 @@ html{
     height:25px;
 }
 
-#lang{
+/* #lang{
     width:80px;
     height:36px;
     background: transparent;
@@ -52,10 +52,73 @@ html{
     height:36px;
     background: transparent;
     background:url("../img/korea.svg")20% 50% no-repeat;
+} */
+.rightmenu{
+    position: absolute;
+    right: 6px;
+    top: 7px;
 }
-
 .rightmenu>ul>li:nth-of-type(1){
     margin-right:10px;
+}
+.arrow {
+    position: absolute;
+    top: 14px;
+    right: 6%;
+    /* display: inline-block; */
+    width: 10px;
+    height: 10px;
+    background: url(../img/arrow.svg) 50% 50% no-repeat;
+}
+.nationSelect{
+    border:3px solid #bea46e;
+    box-sizing: border-box;
+    width:130px;
+    height:40px;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    display: flex;
+}
+
+.nationList{
+    position:absolute;
+    display:none;
+    top:40px;
+    left:0;
+    background:#fff9ec;
+    transition: all 0.5s ease 0s;
+    /* height:40px;
+    overflow:hidden; */ 
+}
+
+.nationList.on{
+    height:120px;
+}
+
+.nationList>li{
+    border-bottom:1px solid #E4C486;
+    width:130px;
+    height:40px;
+    background:#fff9ec;
+    display:flex;
+    align-items: center;   
+}
+
+.nationList>li:last-of-type{
+    border-bottom:none;
+}
+
+.nationList img{
+    margin-left:5px;
+    margin-right:7px;
+    width:30px;
+}
+
+.nationclick{
+    position: relative;
+    border:1px solid red;
+    height:40px;
 }
 
 
@@ -1022,7 +1085,7 @@ header>.submainmenu{
 .randomarea>img{
     position: absolute;
     top: 38%;
-    right: 32%;
+    right: 26%;
 }
 
 .randomimgani {

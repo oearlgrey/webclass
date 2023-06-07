@@ -62,9 +62,39 @@ nav.on{
     align-items: center;
     height:50px;
     box-sizing: border-box;
-
+    justify-content: space-between;
+    border:1px solid lime;
 }
 
+.depi{
+    width:20px;
+    height:20px;
+    position:relative;
+    transition: all 0.5s ease 0s;
+}
+
+.depi:before {
+    content: "";
+    background: black;
+    width: 18px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.depi:after {
+    content: "";
+    background: black;
+    width: 1px;
+    height: 18px;
+    position: absolute;
+    left: 9px;
+    top: 0px;
+}
+.gnb>li.on .depi:after{
+    display:none;
+}   
 .gnb ul>li{
 
     height:50px;
