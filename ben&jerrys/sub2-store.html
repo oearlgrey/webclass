@@ -17,26 +17,26 @@
 <body>
     <div class="sub2container">
         <div class="sub1top">
-            <header id="header" class="header subheader">
+            <header class="subheader" id="headertop">
                 <nav class="rightmenu">
                     <ul>
-                        <li>
+                        <li class="searchimg">
                             <a href="#">
                                 <img src="./img/search.svg" alt="검색창 이미지">
                             </a>    
                         </li>
-                        <li>
-                            <div class="nationSelect">
-                                <img src="./img/korea.svg" alt="한국">
-                                <span class="arrow"></span>
-                                <ul class="nationList">
-                                    <li><a href="#"><img src="./img/korea.svg" alt=""></a></li>
-                                    <li><a href="#"><img src="./img/AT.png" alt=""></a></li>
-                                    <li><a href="#"><img src="./img/AU.png" alt=""></a></li>
-                                    <li><a href="#"><img src="./img/BE.png" alt=""></a></li>
-                                </ul>
+                        <li class="nationclick">
+                            <div class="nationSelect subnationSelect">
+                               <img src="./img/korea.svg" alt=""><p>대한민국</p><span class="arrow"></span>
                             </div>
-                            <!-- <img src="./img/national.svg" alt="국가선택 이미지"> -->
+                            <ul class="nationList subnationList">
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/AT.png" alt=""><p>오스트리아</p>
+                                    </a></li>
+                                <li><a href="#"><img src="./img/AU.png" alt=""><p>호주</p></a></li>
+                                <li><a href="#"><img src="./img/BE.png" alt=""><p>벨기에</p></a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -78,267 +78,421 @@
                 </nav>
             </header>
         </div>
-    <main>
-        <div class="sub2main">
-            <h1 class="htitlestyle">STORE & DELIVERY</h1>
-            <p>가까운 매장을 찾아보세요!</p>
-            <div class="arealist">
-                <section>
-                    <h1>현재 당신의 위치는<span>서울</span>이며, 16개 지점이 검색되었습니다.</h1>
-                </section>
-    
-                <section class="stform">
-                    <ul class="storelist">
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>선릉 DV점</h1>
-                                    <p>070-7707-8732</p>
+        <main>
+            <div class="sub2main">
+                <h1 class="htitlestyle">STORE & DELIVERY</h1>
+                <p>가까운 매장을 찾아보세요!</p>
+                <div class="arealist">
+                    <section>
+                        <h1>현재 당신의 위치는<span>서울</span>이며, 16개 지점이 검색되었습니다.</h1>
+                    </section>
+        
+                    <section class="stform">
+                        <ul class="storelist">
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>선릉 DV점</h1>
+                                        <p>070-7707-8732</p>
+                                    </section>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
-                                        <p>위메프 오</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
-                                        <p>요기요</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/shutlogo.svg" alt="셔틀 로고 이미지">
-                                        <p>셔틀</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>관악DV점(신)</h1>
-                                    <p>02-882-2573</p>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
+                                            <p>위메프 오</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
+                                            <p>요기요</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/shutlogo.svg" alt="셔틀 로고 이미지">
+                                            <p>셔틀</p>
+                                        </li>
+                                    </ul>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
-                                        <p>위메프 오</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
-                                        <p>요기요</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/shutlogo.svg" alt="셔틀 로고 이미지">
-                                        <p>셔틀</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>잠실 DV점</h1>
-                                    <p>050-7782-3629</p>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>관악DV점(신)</h1>
+                                        <p>02-882-2573</p>
+                                    </section>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>명일 DV점</h1>
-                                    <p>050-4823-3302</p>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
+                                            <p>위메프 오</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
+                                            <p>요기요</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/shutlogo.svg" alt="셔틀 로고 이미지">
+                                            <p>셔틀</p>
+                                        </li>
+                                    </ul>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
-                                        <p>위메프 오</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>왕십리 DV점</h1>
-                                    <p>050-4823-3302</p>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>잠실 DV점</h1>
+                                        <p>050-7782-3629</p>
+                                    </section>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
-                                        <p>위메프 오</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
-                                        <p>요기요</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>문정 DV점</h1>
-                                    <p>0508-8197-4859</p>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                    </ul>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
-                                        <p>위메프 오</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
-                                        <p>요기요</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>상명대 DV점</h1>
-                                    <p>02-395-7115</p>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>명일 DV점</h1>
+                                        <p>050-4823-3302</p>
+                                    </section>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
-                                        <p>위메프 오</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>노원 DV점</h1>
-                                    <p>070-4262-3300</p>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
+                                            <p>위메프 오</p>
+                                        </li>
+                                    </ul>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
-                                        <p>위메프 오</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                        <li>
-                            <section class="st_left">
-                                <img src="./img/storeimg.svg" alt="매장이미지">
-                                <section class="storeinfo">
-                                    <h1>건대 DV점(신)</h1>
-                                    <p>02-463-1389</p>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>왕십리 DV점</h1>
+                                        <p>050-4823-3302</p>
+                                    </section>
                                 </section>
-                            </section>
-                            <section class="st_right"> 
-                                <ul>
-                                    <li>
-                                        <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
-                                        <p>배달의 민족</p>
-                                    </li>
-                                    <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
-                                        <p>쿠팡이츠</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
-                                        <p>위메프 오</p>
-                                    </li>
-                                    <li>
-                                        <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
-                                        <p>요기요</p>
-                                    </li>
-                                </ul>
-                            </section>
-                        </li>
-                    </ul>
-                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
+                                            <p>위메프 오</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
+                                            <p>요기요</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>문정 DV점</h1>
+                                        <p>0508-8197-4859</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
+                                            <p>위메프 오</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
+                                            <p>요기요</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>상명대 DV점</h1>
+                                        <p>02-395-7115</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
+                                            <p>위메프 오</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>노원 DV점</h1>
+                                        <p>070-4262-3300</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
+                                            <p>위메프 오</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>건대 DV점(신)</h1>
+                                        <p>02-463-1389</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li><img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/wmlogo.svg" alt="위메프 로고 이미지">
+                                            <p>위메프 오</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
+                                            <p>요기요</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>당산 DV점</h1>
+                                        <p>02-2679-7279</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/yogilogo.svg" alt="요기요 로고 이미지">
+                                            <p>요기요</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>가산 DV점</h1>
+                                        <p>050-6209-6129</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>은평 DV점</h1>
+                                        <p>070-8286-7115</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>혜화 DV점</h1>
+                                        <p>02-2276-0405</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>역삼 DV점</h1>
+                                        <p>050-6418-4812</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>                                
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>방배 DV점</h1>
+                                        <p>070-4441-0166</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>
+                                        <li>
+                                            <img src="./img/cplogo.svg" alt="쿠팡로고 이미지">
+                                            <p>쿠팡이츠</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="st_left">
+                                    <img src="./img/storeimg.svg" alt="매장이미지">
+                                    <section class="storeinfo">
+                                        <h1>하남미사 DV점</h1>
+                                        <p>0508-8186-1220</p>
+                                    </section>
+                                </section>
+                                <section class="st_right"> 
+                                    <ul>
+                                        <li>
+                                            <img src="./img/bmlogo.svg" alt="배달의 민족 로고 이미지">
+                                            <p>배달의 민족</p>
+                                        </li>                                
+                                    </ul>
+                                </section>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
             </div>
-
-        </div>
-    </main>
-    <!-- <footer>
-
-    </footer>     -->
+            <a href="#headertop"><img class="topbtn "src="./img/topbtn.png" alt="상단이동 이미지"></a>
+        </main>   
+        </main>
+        <footer class="sub2footer">
+            <section class="fleft">
+                <ul>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">개인정보보호정책</a></li>
+                    <li><a href="#">개인정보</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </section>
+            <section class="fright">
+                <ul>
+                    <li><a href="#"><img src="./img/twtlogo.svg" alt="트위터 로고 이미지"></li>
+                    <li><a href="#"><img src="./img/facelogo.svg" alt="페이스북 로고 이미지"></a></li>
+                    <li><a href="#"><img src="./img/inslogo.svg" alt="인스타로고 이미지"></a></li>
+                </ul>
+            </section>
+        </footer>
     </div>
-    
+
 </body>
 </html>

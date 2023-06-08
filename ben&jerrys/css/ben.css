@@ -21,7 +21,7 @@ html{
 
 /* 상단메뉴 */
 .top{
-    height:auto;
+    height:115px;
     width:100%;
     margin:0 auto;
     background:#E4C486;
@@ -61,17 +61,28 @@ html{
 .rightmenu>ul>li:nth-of-type(1){
     margin-right:10px;
 }
+
+.searchimg{
+    position: relative;
+}
+
+.searchimg img{
+    position: absolute;
+    top: -11px;
+    left: -24px;
+}
 .arrow {
     position: absolute;
-    top: 14px;
-    right: 6%;
+    top: 11px;
+    right: 6px;
     /* display: inline-block; */
     width: 10px;
     height: 10px;
     background: url(../img/arrow.svg) 50% 50% no-repeat;
 }
+
 .nationSelect{
-    border:3px solid #bea46e;
+    border:2px solid #bea46e;
     box-sizing: border-box;
     width:130px;
     height:40px;
@@ -79,22 +90,46 @@ html{
     position: relative;
     overflow:hidden;
     display: flex;
+    align-items: center;
+
+}
+
+.nationSelect img{
+    width:30px;
+    margin-left:7px;
+    margin-right:9px;
+}
+
+.nationclick{
+    font-family: "paybook";
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
 .nationList{
     position:absolute;
-    display:none;
+    overflow:hidden;
     top:40px;
     left:0;
     background:#fff9ec;
     transition: all 0.5s ease 0s;
-    /* height:40px;
-    overflow:hidden; */ 
+    height:0px;
 }
 
 .nationList.on{
     height:120px;
 }
+
+.nationclick .subnationSelect{
+    border:2px solid #3eb5ff;
+}
+
+.nationclick .subnationList>li{
+    background:#fff;
+    border-bottom:1px solid #8CCFF9;
+}
+
 
 .nationList>li{
     border-bottom:1px solid #E4C486;
@@ -108,16 +143,18 @@ html{
 .nationList>li:last-of-type{
     border-bottom:none;
 }
-
+.nationList a{
+    display:flex;
+    align-items: center;   
+}
 .nationList img{
-    margin-left:5px;
-    margin-right:7px;
+    margin-left:7px;
+    margin-right:9px;
     width:30px;
 }
 
 .nationclick{
     position: relative;
-    border:1px solid red;
     height:40px;
 }
 
@@ -127,15 +164,15 @@ html{
 }
 
 .logoarea{
-    margin-bottom:30px;
-    padding-top:10px;
+    padding-bottom:30px;
+    padding-top:20px;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
 .mainmenu{
-
+    box-sizing: border-box;
     border-bottom:1px solid #fff;
     width:100%;
     height:100px;
@@ -146,7 +183,6 @@ html{
 }
 
 header{
-
     margin:0 auto;
     width:100%;
     height:auto;
@@ -745,10 +781,10 @@ footer{
     justify-content: space-between;
     align-items: center;
     font-family: "paybook";
-    font-size:1.5rem;
+    font-size:1.2rem;
     font-weight:bold;
     width:100%;
-    height:180px;
+    height:100px;
     background:#EADCBB;
 }
 
@@ -783,13 +819,14 @@ footer{
 
 .sub1top{
     width:100%;
-    height:auto;
+    height:115px;
     margin:0 auto;
     background:#8CCFF9;
 }
 
 .sub1banner>img{
     width:100%;
+    object-fit: contain;
 }
 /* .sub1header{
     margin:0 auto;
@@ -800,7 +837,9 @@ footer{
 
 /* 메뉴단 스타일 */
 .mainmenu{
+    box-sizing: border-box;
     border-bottom:1px solid #fff;
+    background: #E4C486;;
     width:100%;
     height:100px;
     display:flex;
@@ -814,6 +853,9 @@ footer{
 }
 
 header>.submainmenu{
+    height: 100px;
+    box-sizing: border-box;
+    background: #8CCFF9;
     border-bottom:0;
     border-top:1px solid #fff;
 }
@@ -1163,6 +1205,7 @@ header>.submainmenu{
 }
 
 .arealist{
+    border: 2px solid #d1cdcd;
     margin:0 auto;
     width:1400px;
     height:3510px;
@@ -1170,7 +1213,6 @@ header>.submainmenu{
 }
 
 .arealist>section{
-    border:1px solid red;
     margin-bottom:200px;
     display: flex;
     align-items: center;
@@ -1181,6 +1223,7 @@ header>.submainmenu{
     font-weight:bold;
     margin-left:50px;
     padding-top:50px;
+
 }
 .arealist>section span{
     font-size: 1.5rem;
@@ -1194,8 +1237,20 @@ header>.submainmenu{
     vertical-align: middle;
     padding: 7px 40px;
     margin: 0 18px;
+    position: relative;
 }
 
+.arealist span:after{
+    content:"";
+    display:inline-block;
+    position:absolute;
+
+    top: 18px;
+    right: 9px;
+    width:10px;
+    height:10px;
+    background:url("../img/arrow.svg") 50% 50% no-repeat;
+}
 .sub2main>h1{
     padding-top:200px;
     margin-bottom:56px;
@@ -1238,7 +1293,6 @@ header>.submainmenu{
 .st_left{
     display:flex;
     width:580px;
-    border:1px solid red;
     justify-content: flex-start;
     padding-left: 50px;
 }
@@ -1265,7 +1319,6 @@ header>.submainmenu{
 }
 
 .st_right>ul{
-    border:1px solid blue;
     display: flex;
     justify-content: flex-start;
 }
@@ -1276,7 +1329,6 @@ header>.submainmenu{
 }
 
 .st_right li{
-    border:1px solid red;
     width:140px;
     display:flex;
     flex-direction: column;
@@ -1290,4 +1342,18 @@ header>.submainmenu{
     font-weight:bold;
     font-size:1.1rem;
     color:#A3A19F;
+}
+
+.sub3container{
+    height:auto;
+    margin-bottom:400px;
+
+}
+/* 서브페이지3 회사영역 */
+
+.sub3main{
+    background: #F4F1ED;
+    width:100%;
+    height:auto;
+
 }

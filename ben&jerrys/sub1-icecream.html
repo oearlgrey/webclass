@@ -19,23 +19,26 @@
 <body>
     <div class="sub1container">
         <div class="sub1top">
-            <header id="header" class="header subheader">
+            <header class="subheader" id="headertop">
                 <nav class="rightmenu">
                     <ul>
-                        <li>
+                        <li class="searchimg">
                             <a href="#">
                                 <img src="./img/search.svg" alt="검색창 이미지">
                             </a>    
                         </li>
-                        <li>
-                            <label for="lang"></label>
-                            <select id="lang">
-                                <option><img src="./img/national.svg" alt="국가선택 이미지"></option>
-                                <option class="lang1"> </option>
-                                <option class="lang2"></option>
-                                <option class="lang3"></option>
-                            </select>
-                            <!-- <img src="./img/national.svg" alt="국가선택 이미지"> -->
+                        <li class="nationclick">
+                            <div class="nationSelect subnationSelect">
+                               <img src="./img/korea.svg" alt=""><p>대한민국</p><span class="arrow"></span>
+                            </div>
+                            <ul class="nationList subnationList">
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/AT.png" alt=""><p>오스트리아</p>
+                                    </a></li>
+                                <li><a href="#"><img src="./img/AU.png" alt=""><p>호주</p></a></li>
+                                <li><a href="#"><img src="./img/BE.png" alt=""><p>벨기에</p></a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -259,7 +262,7 @@
                 <div class="freeconeday">
                     <h1><span><i>FREE </i><b>CONE DAY</b></span>에</h1>
                     <h2><i>꼭</i> 먹어봐야 할 맛은 ? </h2>
-                    <section class="randomimg"></section>
+                    <section class="ranbtndomimg"></section>
                     <img src="./img/underline.png" alt="밑줄 이미지">
                 </div>
                 <div class="randomarea"> 
@@ -269,7 +272,7 @@
 
                 
             </div>
-            <a href="#header"><img class="topbtn "src="./img/topbtn.png" alt="상단이동 이미지"></a>
+            <a href="#headertop"><img class="topbtn "src="./img/topbtn.png" alt="상단이동 이미지"></a>
         </main>   
         
         <footer>
