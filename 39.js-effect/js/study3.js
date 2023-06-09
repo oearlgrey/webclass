@@ -12,17 +12,41 @@ $(document).ready(function(){
     })
     // btnTop을 클릭하면 스크롤바가 가장 최상단으로 부드럽게 이동될 수 있도록
     $(".btntop").click(function(){
-        $("html,body").animate({scrollTop:0},1000)
+
+        // $("html,body").stop().animate({scrollTop:0},1000)
+        // moveScroll(0,1000)
+
+        //함수를 사용해서 적용한 것
+        moveScroll({
+            top:0,
+            speed:2000
+        })
     })
 
     //각각의 메뉴리스트를 클릭했을 때 해당되는 영역으로 부드럽게 스크롤 이동될 수 있도록
     $(".gnb>li>a").click(function(e){
-
+        //e 이벤트 약자
         e.preventDefault() //a태그가 갖고있는 기본기능을 제어
         let target = $(this).attr("href")
        //클릭한 a태그의 href속성에 저장된 속성값이 리턴되어target 변수에 저장된다. 
        //(문자데이터형태로 "#s1" "#s2" ...)
         let target_top = $(target).offset().top
-        $("html,body").animate({scrollTop:target_top},1000)
+        
+        // moveScroll(target_top,1000)
+        // $("html,body").stop().animate({scrollTop:target_top},1000)
+        
+        //함수를 사용해서 적용한 것
+        moveScroll({top:target_top,speed:1000})
     })
+
+    // function moveScroll(top,speed){
+    //     $("html,body").stop().animate({scrollTop:top},speed)    
+    // }
+
+
+    //함수 만든 것
+    function moveScroll(option){
+        $("html,body").stop().animate({scrollTop:option.top},option.speed)    
+     }
+    
 })
