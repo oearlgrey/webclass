@@ -1500,22 +1500,23 @@ header>.submainmenu{
     margin-left: 5px;
 }
 
-.chap1dt{
+.startintrodt{
     top: 267px;
     left: 3%;
 }
 
-.chap2dt{
+.chap1dt{
     top: 367px;
     left: 3%;
 }
 
-.chap3dt{
+
+.chap2dt{
     top: 467px;
     left: 3%;
 }
 
-.chap4dt{
+.chap3dt{
     top: 567px;
     left: 3%;
 }
@@ -1525,7 +1526,7 @@ header>.submainmenu{
 }
 
 /* chap1 */
-.chapter1dd{
+.startintrodd{
     border:1px solid red;
     width:1210px;
     height:837px;
@@ -1534,18 +1535,18 @@ header>.submainmenu{
     align-items: center;
 }
 
-.chapter1bg{
+.startintrobg{
     border:1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.chapter1bg>h2>b{
+.startintrobg>h2>b{
     color:#897562;
     font-size:3.4rem;
 }
-.chapter1bg>h2{
+.startintrobg>h2{
 
     border:1px solid red;
     font-family: "bmjua";
@@ -1558,11 +1559,11 @@ header>.submainmenu{
     margin-top:62px;
 }
 
-.chapter1bg ul{
+.startintrobg ul{
     display:flex;
       margin-top:80px;
 }
-.chapter1bg li>section{
+.startintrobg li>section{
     background:#FCF1E6;
     border-radius: 50%;
     width:270px;
@@ -1571,18 +1572,18 @@ header>.submainmenu{
     align-items: center;
     justify-content: center;
 }
-.chapter1bg li{
+.startintrobg li{
     border:1px solid red;
     margin-right:110px;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.chapter1bg li:last-of-type{
+.startintrobg li:last-of-type{
     margin-right:0;
 }
 
-.chapter1bg h3{
+.startintrobg h3{
     border:1px solid blue;
     font-family: "bmjua";
     font-size:1.5rem;
@@ -1590,16 +1591,39 @@ header>.submainmenu{
     text-align: center;
 }
 
-.chapter1bg h2{
+.startintrobg h2{
     border:1px solid blue;
     font-family: "bmjua";
     font-size:2rem;
     text-align: center;
     color:#60482B;
 }
+.chapter1bg h2{
+    border:1px solid blue;
+    font-family: "bmjua";
+    font-size:2rem;
+    text-align: center;
+    color:#60482B;
+} */
 
-/* chapter 2/ */
+/* chapter1 */
+.chapter1dd{
+    border:1px solid red;
+    width:1210px;
+    height:837px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
+
+.chapter1bg{
+    border:1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* chapter2  */
 .chapter2dd{
     border:1px solid red;
     width:1210px;
@@ -1616,29 +1640,7 @@ header>.submainmenu{
     align-items: center;
 }
 
-
-
-
-
-/* chap3 */
-
-.chapter3dd{
-    border:1px solid red;
-    width:1210px;
-    height:837px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.chapter3bg{
-    border:1px solid blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.chap3cc{
+.chap2cc{
     background:#FCF1E6;
     border-radius: 50%;
     width:130px;
@@ -1649,11 +1651,11 @@ header>.submainmenu{
     justify-content: center;
 }
 
-.chap3cc>img{
+.chap2cc>img{
     width:90px;
 }
 
-.chap3ddli{
+.chap2ddli{
     display:flex;
     align-items: center;
     font-size: 1.1rem;
@@ -1664,21 +1666,15 @@ header>.submainmenu{
     line-height: 25px;
 }
 
-.chap3ul{
+.chap2ul{
     width:1000px;
     display:flex;
     justify-content:flex-start;
     flex-wrap:wrap;
 
 }
-.chaptitle{
-    font-size:3.5rem;
-    color:#60482B;
-    font-family: "bmjua";
-    margin-top: 62px;
-}
 
-
+/* chap3 */
 .chapter3dd{
     border:1px solid blue;
     width:1210px;
@@ -1695,4 +1691,9 @@ header>.submainmenu{
     align-items: center;
 }
 
-
+.chaptitle{
+    font-size:3.5rem;
+    color:#60482B;
+    font-family: "bmjua";
+    margin-top: 62px;
+}
