@@ -7,14 +7,14 @@ img{max-width:100%}
 
 .station{
     margin: 0 auto;
-    width:500px;
-    height:300px;
+    width:100%;
+    height:600px;
     overflow: hidden;
     position: relative;
 }
 
 .train{
-    width:500%;
+    width:calc(500%/1);
     height:100%;
     display:flex;
     transition: all 1s ease 0s;
