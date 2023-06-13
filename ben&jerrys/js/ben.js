@@ -13,5 +13,14 @@ $(document).ready(function(){
     // $(".nationList").click(function(){
     //     return false;
     // })
+    $(".com1st>dl>dt").click(function(){
+        if($(this).next().hasClass("ddon")==false){
+            $(".com1st>dl>dd").removeClass("ddon")
+            $(this).next().addClass("ddon")
+        }else{
+            $(this).next().removeClass("ddon")
+        }
+            
+    })
 
 })

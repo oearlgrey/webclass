@@ -72,12 +72,36 @@ $(document).ready(function(){
         e.preventDefault()
         count--; 
         // -1, -2... //+주면 오른쪽으로 이동 왼쪽으로 이동 클릭시 오른쪽 클릭 하며 플러스 된 값에서 -1씩 감소 됨 그래서 prev버튼은 -가 붙을 수 없음 
-        if(count<0){count=0} 
+        if(count<0){count=4} 
         // $(".train").css("transform","translateX("+(-20*count)+"%)") 
         //-20 *-1 =20%
         moveSlider(count)
     })
 
+    //자동슬라이드기능
+     let timer = setInterval(function(){
+        count++; //1, 2 ...
+        if(count>4){count=0} 
+        moveSlider(count)    
+     },2000)
+
+     //마우스오버아웃
+     $(".station").mouseover(function(){
+        clearInterval(timer)
+     })
+
+     $(".station").mouseout(function(){
+        timer = setInterval(function(){
+            count++; //1, 2 ...
+            if(count>4){count=0} 
+            moveSlider(count)    
+         },2000)
+    
+     })
+     
+
+
+     //함수값
     function moveSlider(idx){
         $(".train").css("transform","translateX("+(-20*idx)+"%)")
     }

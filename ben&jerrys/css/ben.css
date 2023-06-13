@@ -1527,7 +1527,7 @@ header>.submainmenu{
 
 /* chap1 */
 .startintrodd{
-    border:1px solid red;
+
     width:1210px;
     height:837px;
     display:flex;
@@ -1536,7 +1536,7 @@ header>.submainmenu{
 }
 
 .startintrobg{
-    border:1px solid blue;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1548,7 +1548,6 @@ header>.submainmenu{
 }
 .startintrobg>h2{
 
-    border:1px solid red;
     font-family: "bmjua";
     font-size:3.8rem;
     display: flex;
@@ -1573,7 +1572,7 @@ header>.submainmenu{
     justify-content: center;
 }
 .startintrobg li{
-    border:1px solid red;
+
     margin-right:110px;
     display: flex;
     justify-content: center;
@@ -1584,7 +1583,7 @@ header>.submainmenu{
 }
 
 .startintrobg h3{
-    border:1px solid blue;
+
     font-family: "bmjua";
     font-size:1.5rem;
     color:#60482B;
@@ -1592,23 +1591,22 @@ header>.submainmenu{
 }
 
 .startintrobg h2{
-    border:1px solid blue;
+
     font-family: "bmjua";
     font-size:2rem;
     text-align: center;
     color:#60482B;
 }
 .chapter1bg h2{
-    border:1px solid blue;
+
     font-family: "bmjua";
     font-size:2rem;
     text-align: center;
     color:#60482B;
-} */
+}
 
 /* chapter1 */
 .chapter1dd{
-    border:1px solid red;
     width:1210px;
     height:837px;
     display:flex;
@@ -1618,14 +1616,89 @@ header>.submainmenu{
 
 
 .chapter1bg{
-    border:1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.chap1ul h1{
+    color:#fff;
+    font-family: "paybook";
+    font-size:1.4rem;
+}
+.chap1ultitle{
+    background:#60482B;
+    width:142px;
+    height:46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 20px 0 0;
+}
+
+.chap1ul{
+   
+    width:1000px;
+    height:480px;
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top:76px;
+}
+
+.chap1ul>li{
+    width: 500px;
+    height: 240px;
+}
+
+.chap1ul span{
+    display: inline-block;
+    width:18px;
+    height:20px;
+}
+
+.chap1ul span:before{
+    content:"";
+    display: inline-block;
+    background: #60482B;
+    width:1.5px;
+    height:15px;
+    transform:rotate(30deg);
+    margin-left:5px;
+}
+
+.chap1ul section>ul section{
+    display: flex;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.chap1ul p{
+    width:500px;
+    line-height: 26px;
+    font-family: "paybook";
+    font-size:1.2rem;
+    color:#897562;
+}
+
+
+.jerryrela{
+    position: relative;
+}
+
+.chap1ul p.jerry{
+    font-size:1.1rem;
+    font-weight:bold;
+    color:#60482B;
+    position: absolute;
+    bottom: -45%;
+    right: -38%;
+
+}
+
 /* chapter2  */
 .chapter2dd{
-    border:1px solid red;
     width:1210px;
     height:837px;
     display:flex;
@@ -1634,7 +1707,6 @@ header>.submainmenu{
 }
 
 .chapter2bg{
-    border:1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1663,7 +1735,7 @@ header>.submainmenu{
     width:500px;
     height:300px;
     color: #897562;
-    line-height: 25px;
+    line-height: 26px;
 }
 
 .chap2ul{
@@ -1676,7 +1748,6 @@ header>.submainmenu{
 
 /* chap3 */
 .chapter3dd{
-    border:1px solid blue;
     width:1210px;
     height:837px;
     display:flex;
@@ -1685,7 +1756,6 @@ header>.submainmenu{
 }
 
 .chapter3bg{
-    border:1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1696,4 +1766,127 @@ header>.submainmenu{
     color:#60482B;
     font-family: "bmjua";
     margin-top: 62px;
+}
+
+
+.chap3social{
+    width:280px;
+}
+
+.chap3area{
+    width:180px;
+}
+
+/* 슬라이드 기능 css */
+.com1st{
+    position: relative;
+}
+
+.startintrodd{
+    border:1px solid red;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.chapter1dd{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.chapter2dd{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+
+.chapter3dd{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.com1st dd{
+    /* width:0; */
+    transform-origin: left center;
+    transform:scaleX(0);
+    overflow:hidden;
+    transition:all 0.5s ease 0s;
+    z-index: 0;
+
+}
+.com1st dd.ddon{
+    /* width:1210px; */
+    transform:scaleX(1);
+    z-index: 1;
+}
+
+/* com2nd */
+
+.com2nd{
+    border:1px solid red;
+    width:1400px;
+    height:850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top:115px;
+}
+
+.com2logo{
+    width:221px;
+    margin-bottom:24px;
+}
+
+.com2line{
+    width:957px;
+    margin-bottom:30px;
+}
+
+.com2imgul{
+    border:1px solid red;
+    width:1400px;
+    display:flex;
+    align-items: center;
+
+}
+
+.com2imgul img{
+    height:230px;
+    margin-bottom:50px;
+}
+
+.com2imgul>li{
+    flex:1;
+    border:1px solid red;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:650px;
+}
+
+.com2imgul p.com2ptitle{
+    font-family:"sourcesans";
+    font-size:1.6rem;
+    color:#D3C1AB;
+    margin-bottom:17px;
+}
+
+.com2imgul h1{
+    font-family: "paybook";
+    font-weight:bold;
+    font-size:2.7rem;
+    margin-bottom:53px;
+}
+
+.com2pex{
+    text-align: center;
+    font-family: "paybook";
+    font-size:1.1rem;
+    color:#4C4C4C;
+    line-height: 26px;
 }
