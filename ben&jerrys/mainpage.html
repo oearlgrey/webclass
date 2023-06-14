@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="./js/ben.js"></script>
-    <link rel="stylesheet" href="./css/ben.css">
+
     <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/ben-pc.css">
+    <link rel="stylesheet" href="./css/ben-mobile.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +22,75 @@
 </head>
 <body>
     <div class="container">
-        <div class="top">
-            <header id="headertop">
-                <nav class="rightmenu">
+        <div class="alltop">
+            <div class="top pc">
+                <header id="headertop pc">
+                    <nav class="rightmenu pc">
+                        <ul>
+                            <li class="searchimg">
+                                <a href="#">
+                                    <img src="./img/search.svg" alt="검색창 이미지">
+                                </a>    
+                            </li>
+                            <li class="nationclick">
+                                <div class="nationSelect">
+                                <img src="./img/korea.svg" alt=""><p>대한민국</p><span class="arrow"></span>
+                                </div>
+                                <ul class="nationList">
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/AT.png" alt=""><p>오스트리아</p>
+                                        </a></li>
+                                    <li><a href="#"><img src="./img/AU.png" alt=""><p>호주</p></a></li>
+                                    <li><a href="#"><img src="./img/BE.png" alt=""><p>벨기에</p></a></li>
+                                </ul>
+                            
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="logoarea pc">
+                        <h1>
+                            <a href="#">
+                                <img src="./img/logo.svg" alt="벤앤제리스 로고 이미지">
+                            </a>
+                        </h1>
+                    </div>
+                    </div>
+                    <nav class="mainmenu pc">
+                        <ul class="firmainmenu">
+                            <li><a href="#">아이스크림</a>
+                                <ul class="firmain1">
+                                    <li><a href="#">아이스크림</a></li>
+                                    <li><a href="#">아이스크림을 만드는 방법</a></li>
+                                    <li><a href="#">맛의 무덤</a></li>
+                                    <li><a href="#">맛 전문가들</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">가치관</a>
+                                <ul class="firmain2">
+                                    <li><a href="#">브랜드를 운영하는 방법</a></li>
+                                    <li><a href="#">벤 앤 제리스 재단</a></li>
+                                    <li><a href="#">벤 앤 제리스의 사회 활동</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">회사소개</a>
+                                <ul class="firmain3">
+                                    <li><a href="#">문의</a></li>
+                                    <li><a href="#">우리가 비즈니스를 하는 곳</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">새로운 소식</a>
+                            </li>
+                            <li><a href="#">매장위치 찾기</a></li>
+                            <li><a href="#">FFF</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>       
+        </div>
+        <!-- <div class="top mo">
+            <header id="headertop mo">
+                <nav class="rightmenu mo">
                     <ul>
                         <li class="searchimg">
                             <a href="#">
@@ -29,7 +99,7 @@
                         </li>
                         <li class="nationclick">
                             <div class="nationSelect">
-                               <img src="./img/korea.svg" alt=""><p>대한민국</p><span class="arrow"></span>
+                               <h1>LANG</h1>
                             </div>
                             <ul class="nationList">
                                 <li>
@@ -43,7 +113,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="logoarea">
+                <div class="logoarea mo">
                     <h1>
                         <a href="#">
                             <img src="./img/logo.svg" alt="벤앤제리스 로고 이미지">
@@ -51,7 +121,7 @@
                     </h1>
                 </div>
                 </div>
-                <nav class="mainmenu">
+                <nav class="mainmenu mo">
                     <ul class="firmainmenu">
                         <li><a href="#">아이스크림</a>
                             <ul class="firmain1">
@@ -81,7 +151,8 @@
                     </ul>
                 </nav>
             </header>
-        </div>        
+        </div>      
+         -->
         <main>
             <div class="topbanner">
                 <section class="firstbanner">
