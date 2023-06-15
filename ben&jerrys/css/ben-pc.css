@@ -282,8 +282,10 @@ header{
 /* 상단 banner */
 
 .topbanner{
+
     margin:0 auto;
     width:100%;
+    height:100vh;
     height:100%;
     background:url("../img/firstbanner.png") no-repeat 50% 50%;
     background-size:cover;
@@ -292,15 +294,59 @@ header{
 .firstbanner{
     padding-top:30px;
     padding-bottom:30px;
-    height:1000px;
+    height:100vh;
+    /* height:1000px; */
     width:100%;
 }
+/* 
+.firstbanner>h1:nth-of-type(1){
+    width:0%;
+    overflow: hidden;
+    transition:all 0.5s ease 0s;
+}
+
+.firstbanner>h1:nth-of-type(1).on{
+    width:60%;
+ 
+}
+
+.firstbanner>h1:nth-of-type(2){
+    width:0%;
+    overflow: hidden;
+    transition:all 1.5s ease 0s;
+}
+
+.firstbanner>h1:nth-of-type(2).on{
+    width:60%;
+}
+*/
+.firstbanner>h1:nth-of-type(3){
+    width:0%;
+    overflow: hidden;
+    transition:all 1.5s ease 0s;
+}
+.firstbanner>h1:nth-of-type(3).on{
+    width:90%;
+    color:#60482B;
+
+}
+@keyframes introAni {
+    0%{
+        opacity: 0;
+        transform: translateX(-10px)translateY(-10px);}
+    
+    100%{
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);}   
+    }
 
 
 
 .firstbanner h1{
     border-bottom:1px solid #fff;
-    padding:45px 30px 0px 15px;
+    margin-left:45px;
+    /* padding:0 0px 0px 15px; */
+    /* padding:45px 30px 0px 15px; */
     font-family: 'Inter', sans-serif;
     font-size:12.5rem;
     color:#fff;
@@ -313,7 +359,7 @@ header{
 }
 
 .firstbanner>h1:nth-of-type(3){
-    padding-right:100px;
+    margin-right:100px;
 }
 
 
@@ -438,9 +484,34 @@ main{
     width: 100%;
     transform: translateY(-50%);
 }
-.topbanner3 > img{
+.topbanner3bg{
     width:100%;
     object-fit: contain;
+}
+
+.topb3img{
+    width:300px;
+    position: absolute;
+    
+}
+
+.topb3i1{
+    top: -37px;
+    left: 23%;
+    animation: motion 0s ease 0s;
+}
+.topb3i2{
+    top:20%;
+    left:80%;
+
+    top: -9%;
+    left: 68%;
+}
+.topb3i3{
+      top:20%;
+    left:80%;
+
+
 }
 
 
@@ -714,7 +785,8 @@ main{
     color: #6DA2B2;
 }
 
-.stdecon>ul{
+
+.stdecon ul{
     margin-top: 30px;
     border:3px solid #E2C282;
     display:flex;
@@ -728,7 +800,7 @@ main{
     box-sizing: border-box;
 }
 
-.stdecon section>a{
+.stdecon section{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -1307,6 +1379,7 @@ header>.submainmenu{
     padding: 7px 40px;
     margin: 0 18px;
     position: relative;
+    cursor: pointer;
 }
 
 .arealist span:after{
@@ -1883,8 +1956,8 @@ header>.submainmenu{
 .com1st dt{
    cursor: pointer;
 }
-.com1st dd{
-  
+.com1st dd>div{
+    /* width:0; */
     transform-origin: left center;
     transform:scaleX(0);
     overflow:hidden;
@@ -1892,8 +1965,8 @@ header>.submainmenu{
     z-index: 0;
 
 }
-.com1st dd.ddon{
-
+.com1st dd.ddon>div{
+    /* width:94%; */
     transform:scaleX(1);
     z-index: 1;
 }
