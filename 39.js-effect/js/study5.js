@@ -58,7 +58,7 @@ $(document).ready(function(){
        })
 
 
-
+       //슬라이드
     $(".btnNext").click(function(e){
         count++; //1, 2 ...
         e.preventDefault()
