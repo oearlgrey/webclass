@@ -33,8 +33,8 @@ ul,ol{list-style:none;}
 
 
 .floatingTxt>h1{
-    font-size:5rem;
-    line-height:100%;
+    /* font-size:5rem;
+    line-height:100%; */
 
 }
 
@@ -65,7 +65,7 @@ ul,ol{list-style:none;}
     opacity: 0.2;
 }
 
-@keyframes introAni {
+ @keyframes introAni {
 0%{
     opacity: 0;
     transform: translateX(-10px)translateY(-10px);}
@@ -76,18 +76,31 @@ ul,ol{list-style:none;}
 }
 
 .floatingTxt h1{
-    font-size: 0;
+    /* font-size: 0; */
+    perspective: 200px;
+    /* font-size:4rem; */
+
     /* animation: introAni 1s ease 0s; */
 }
 
 .floatingTxt h1 b{
-    font-size:5rem;
+    /* font-size:5rem;
     line-height: 5rem;
     opacity: 0;
-    display: inline-block;
+    display: inline-block; */
 }
 
-.floatingTxt h1 b:nth-of-type(1){animation:introAni 1s ease 0s forwards;}
+.con{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* .floatingTxt h1 b:nth-of-type(1){animation:introAni 1s ease 0s forwards;}
 .floatingTxt h1 b:nth-of-type(2){animation:introAni 1s ease 0.25s forwards;}
 .floatingTxt h1 b:nth-of-type(3){animation:introAni 1s ease 0.5s forwards;}
 .floatingTxt h1 b:nth-of-type(4){animation:introAni 1s ease 0.75s forwards;}
@@ -124,6 +137,6 @@ ul,ol{list-style:none;}
 .floatingTxt h1 b:nth-of-type()
 .floatingTxt h1 b:nth-of-type()
 .floatingTxt h1 b:nth-of-type()
-.floatingTxt h1 b:nth-of-type()
+.floatingTxt h1 b:nth-of-type() */
 
 
