@@ -292,7 +292,7 @@ header{
     position: relative;
 }
 .firstbanner{
-    padding-top:30px;
+    padding-top:80px;
     padding-bottom:30px;
     height:100vh;
     /* height:1000px; */
@@ -345,8 +345,9 @@ header{
 .firstbanner h1{
     border-bottom:1px solid #fff;
     margin-left:45px;
+    margin-right:45px;
     /* padding:0 0px 0px 15px; */
-    /* padding:45px 30px 0px 15px; */
+    padding-top:45px;
     font-family: 'Inter', sans-serif;
     font-size:12.5rem;
     color:#fff;
@@ -493,27 +494,31 @@ main{
     width:300px;
     position: absolute;
     
+    
 }
 
 .topb3i1{
     top: -37px;
     left: 23%;
-    animation: motion 0s ease 0s;
+    animation: icemotion 0.5s linear 0.5s infinite alternate;
 }
+
 .topb3i2{
-    top:20%;
-    left:80%;
-
-    top: -9%;
-    left: 68%;
+    top: -12%;
+    left: 72%;
+    animation: icemotion 0.5s linear 0.7s infinite alternate
 }
+
 .topb3i3{
-      top:20%;
-    left:80%;
-
-
+    top: 20%;
+    left: 63%;
+    animation: icemotion 0.6s linear 0.95s infinite alternate
 }
 
+@keyframes icemotion {
+	0% {margin-top: 0px;} /* 처음 위치 */
+	100% {margin-top: 15px;} /* 마지막 위치*/
+}
 
 
 /* 아이스크림이동 */
