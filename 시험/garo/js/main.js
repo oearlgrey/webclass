@@ -5,7 +5,8 @@ $(document).ready(function(){
     setInterval(function(){
         count++;
         if(count>2){count=0}
-        $(".train").css("transform","translateX("+(-33.333*count)+"%)")  
+        $(".train").css("transform","translateX("+(-1200*count)+"px)")
+                                //("transform","translateX("+(-33.333*count)+"%)")  
     },2500)
 
     //세로형
