@@ -1,0 +1,41 @@
+div{
+margin:0 auto;
+border:1px solid red;
+width:800px;
+height:500px;
+position: relative;
+}
+
+
+dt{
+    width:calc(500px/3);
+    height:50px;
+    float:left;
+    display:flex;
+    align-items: center;
+    padding-left:20px;
+    cursor: pointer;
+}
+
+dt:after{
+    clear:both;
+}
+
+dd{
+    position: absolute;
+    width:800px;
+    left:0;
+    top:50px;
+    display:flex;
+    align-items: center;
+    display:none;
+    padding-top:20px;
+}
+
+dt.on{
+    border-bottom:2px solid black;
+}
+
+dd.on{
+    display:block;
+}
