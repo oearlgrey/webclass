@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+ul,ol {
+    list-style: none;
+}
+  
+ul svg {
+    border: 5px solid blue;
+    width: 400px;
+    transform:rotate(-90deg)
+}
+  
+.a {
+    fill: aquamarine;
+    fill-opacity: 0.5;
+    stroke: brown;
+    stroke-width: 2;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    /* 선의 길이 */
+    transition: all 0.5s ease 0s;
+}
+  
+.a:hover {
+    fill: rgb(87, 133, 231);
+    fill-opacity: 1;
+    stroke: burlywood;
+    stroke-width: 3;
+    stroke-dasharray: 157;
+    /* calc(1 - 0.8)*314 // 80% 원이 그려짐 */
+}
+  
+.list{
+    width:1200px;
+    margin:0 auto;
+    display: flex;
+}
+
+.list>li{
+    width:1;
+}
+
+.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;
+    transition: all 0.5s ease 0s;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+}
+
+.cls-1:hover{
+    stroke:red;
+    stroke-width:10px;
+    stroke-dasharray: 0;
+}

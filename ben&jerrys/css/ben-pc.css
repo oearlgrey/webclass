@@ -837,11 +837,17 @@ main{
 }
 
 .topbtn{
+    border:1px solid red;
     width:40px;
+    height:80px;
 	position:fixed;
 	bottom:20px;
 	right:20px;
 	z-index:999;
+    
+}
+.topbtn img{
+    width:40px;
 }
 
 .fbanner1{
@@ -895,6 +901,10 @@ main{
 .fbanner1>section>h1:nth-of-type(2){
     width:300px;
 }
+.spiralPath{
+    stroke:black;
+    fill:none;
+}
 
 .icewithpt1{
     width:360px;
@@ -908,14 +918,36 @@ main{
     object-fit: cover;
 }
 
-.fbanner2{
-    width:100%;
-    height:1018px;
-    display:flex;
+.fbanner2 {
+    width: 100%;
+    height: 5000px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-
+.disno{
+ fill:none;   
+}
+.spiral{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:800px;
+    border:1px solid red;
+}
+.spiral svg{
+    height: 800px;
+    display: block;
+    margin: 0 auto;
+}
+.spiral img{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%)
+}
 
 footer{
     display:flex;
