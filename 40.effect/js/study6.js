@@ -111,3 +111,9 @@ $(document).ready(function(){
     })
 })
 
+function abc(idx){
+    alert(idx)
+}
+
+let count =4
+abc(count)

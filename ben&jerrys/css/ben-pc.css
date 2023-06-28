@@ -339,6 +339,8 @@ header{
         transform: translateX(0px) translateY(0px);}   
     }
 
+    /* .fbanner2{display:none!important} */
+
 
 
 .firstbanner h1{
@@ -920,24 +922,37 @@ main{
 
 .fbanner2 {
     width: 100%;
-    height: 5000px;
+    height: 5080px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+
 }
 .disno{
  fill:none;   
 }
 .spiral{
+    margin-top:80px;
+    font-size:1.7rem;
+    font-family: "sourcesans";
     position:absolute;
     left:0;
     top:0;
     width:100%;
     height:800px;
-    border:1px solid red;
+
+}
+
+.spiral path{
+    stroke:transparent;
+}
+.spiral text{
+    fill:#8d5c51;
+    letter-spacing:4.5px;
 }
 .spiral svg{
+    width:100%;
     height: 800px;
     display: block;
     margin: 0 auto;
