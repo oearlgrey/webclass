@@ -1,0 +1,42 @@
+*{margin:0;padding:0;}
+
+.station{
+    margin:0 auto;
+    width:800px;
+    height:700px;
+    overflow: hidden;
+}
+
+.train{
+    margin:0 auto;
+    display: flex;
+    width:3200px;
+    height:700px;
+    transition: all 0.5s ease 0s;
+}    
+
+.train>li{
+    height:700px;
+}
+
+.train img{
+    width:800px;
+    height:700px;
+    object-fit: cover;
+}
+
+.all{
+    position: relative;
+}
+
+.btn{
+    color:#fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+

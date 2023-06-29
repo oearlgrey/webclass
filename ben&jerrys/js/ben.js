@@ -44,24 +44,31 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
         let winst = $(window).scrollTop()
+      
         let fbanner2Top = $(".fbanner2").offset().top
+        
+        
         console.log(winst - fbanner2Top)
 
+      
         if(winst-fbanner2Top<0){
             $(".spiral").css("position","absolute")
             $(".spiral").css("top","0")
         }
 
-        if(winst - fbanner2Top >=0 && winst-fbanner2Top < 4180){
+        //footer높이 뺀값 4100
+
+
+        if(winst - fbanner2Top >=0 && winst-fbanner2Top < 4100){//4180
             // console.log(winst - fbanner2Top)
             $(".spiral").css("position","fixed")
             $(".spiral").css("top","0")
             $("#textP").attr("startOffset",winst - fbanner2Top)
         }   
 
-        if(winst-fbanner2Top>=4180){
+        if(winst-fbanner2Top>=4100){
             $(".spiral").css("position","absolute")
-            $(".spiral").css("top","4180px")
+            $(".spiral").css("top","4100px")
         }
     })
 })
