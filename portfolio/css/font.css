@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "old";
+    src:url("../font/BASKVILL.TTF");
+}
+
+@font-face {
+    font-family: "gro";
+    src:url("../font/CabinetGrotesk-Variable.ttf");
+}
+
+@font-face {
+    font-family: "gowun";
+    src:url("../font/GowunDodum-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

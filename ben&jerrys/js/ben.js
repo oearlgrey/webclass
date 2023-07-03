@@ -71,4 +71,11 @@ $(document).ready(function(){
             $(".spiral").css("top","4100px")
         }
     })
+
+    $(".topbtn").click(function() {
+        $('html, body').animate({
+            scrollTop : 0
+        }, 400);
+        return false;
+    });
 })

@@ -1,0 +1,280 @@
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal;}
+b,strong{font-weight: normal;}
+i,em,address{font-style: normal;}
+a{color:inherit;text-decoration: none;}
+ul,ol{list-style: none;}
+
+html{
+    font-family: 'Noto Sans KR', sans-serif;
+    color:#1E1E1E;
+}
+
+.container{
+    border:1px solid red;
+    margin:0 auto;
+}
+
+.intro{
+    border:1px solid blue;
+    background:#F2F6F7;
+    width:100vw;
+    height:80vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 100;
+}
+
+.intro h1{
+    font-family: "old";
+    font-size:10rem;
+    line-height: 168px;
+    text-align: center;
+    margin-bottom:48px;
+}
+
+.lpbg{
+    background:#F2F6F7;
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+    position:absolute;
+    left:50%;
+    bottom: -16%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.intro img{
+    width:220px;
+    animation: rotate_image 6s linear infinite;
+    transform-origin: 50% 50%;
+    
+}
+
+.intro p{
+    font-family: "gro";
+    text-align: center;
+    font-size:1.5rem;
+    line-height: 38px;
+    margin-bottom:54px;
+}
+
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* videopart */
+
+.videopart{
+    border:1px solid blue;
+    width:100vw;
+    height:100vh;
+    position: relative;
+}
+
+.videopart video{
+    width:100vw;
+    height:100vh;
+    object-fit: cover;
+}
+
+.videopart h1{
+    color:#fff;
+    position: absolute;
+    font-family: "old";
+    font-size:4.2rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/* aboutme */
+
+.aboutme{
+    border:1px solid blue;
+    width:100vw;
+    height:100vh;
+}
+
+.aboutme>h1{
+    box-sizing: border-box;
+    font-family:"old";
+    font-size: 4.7rem;
+    width:1000px;
+    line-height: 72px;
+    padding-top:50px;
+    padding-left:50px;
+    text-transform: uppercase;
+}
+.aboutp1{
+    width:900px;
+    margin-top:20px;
+    margin-left:50px;
+
+    font-size: 1.3rem;
+}
+
+.aboutp2{
+    margin-left:50px;
+    width:900px;
+    color:#5E8597;
+    font-size:2.3rem;
+    font-family: 'InkLipquid';
+}
+
+.aboutcon{
+    margin-top:50px;
+    margin-left:50px;
+    width: 95vw;
+}
+
+.aboutcon ul{
+    display:flex;
+}
+
+.aboutcon h2{
+    width:160px;
+    height:40px;
+    background:#5E8597;
+    
+    margin-bottom:20px;
+    text-align: center;
+    line-height: 40px;
+    font-size:1.2rem;
+    color:#fff;
+}
+
+.aboutcon p{
+
+    font-size:1.2rem;
+    
+    
+}
+
+.aboutcon section{
+    margin-bottom:17px;
+
+}
+
+.line{
+    display: block;
+    width:50px;
+    background:#5E8597;
+    height:1px;
+    margin:15px 15px 20px 0;
+}
+.aboutconul li{
+    flex:1;
+}
+
+.colorp{
+    color:#5A5B5B;
+}
+
+.aboutfoot{
+    border:1px solid red;
+    width:200px;
+    float:right;
+}
+
+.aboutfoot:after{
+    clear:both;
+}
+
+/* program */
+
+.program{
+    border:1px solid red;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.program h1{
+    font-family: "old";
+    font-size:6rem;
+    text-align: center;
+    padding-top: 20px;
+    width:600px;
+    border-bottom:1px solid #869A9E;
+    margin-bottom:15px;
+}
+
+.program>p{
+    font-size:1.3rem;
+    margin-bottom:100px;
+}
+
+.programgraph {
+    border:1px solid red;
+}
+
+.programgraph h2{
+    font-family: "old";
+    color:#5A5B5B;
+    font-size:3rem;
+    width:240px;
+}
+.programgraph>li{
+    display:flex;
+    margin-bottom:40px;
+
+}
+
+.Right>ul{
+    display:flex;
+    flex-direction: column;
+}
+
+.Right>ul>li{
+    display: flex;
+    align-items: center;
+}
+
+.Right li p{
+    font-family: "old";
+    font-size:1.8rem;
+}
+
+.Right>ul section{
+    margin-right:10px;
+}
+
+.borderbar1{
+    background:#5E8597;
+    height:15px;
+}
+
+.borderbar2{
+    background:#A3C7D1;
+    height:15px;
+}
+
+.graph1 .Right li:nth-of-type(1) section{
+    width:550px;
+    border:1px solid red;
+}
+
+.graph1 .Right li:nth-of-type(2) section{
+    width:500px;
+    border:1px solid red;
+}
+
+.graph2 .Right li:nth-of-type(1) section{
+    width:550px;
+}
+
+.graph3 .Right li:nth-of-type(1) section{
+    width:520px;
+}
