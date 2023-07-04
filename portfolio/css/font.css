@@ -19,3 +19,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: "hol";
+    src:url("../font/Holista\ Demo.ttf");
+}
