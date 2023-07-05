@@ -23,5 +23,16 @@
 
 @font-face {
     font-family: "hol";
-    src:url("../font/Holista\ Demo.ttf");
+    src:url("../font/Holista/Demo.ttf");
 }
+
+@font-face {
+    font-family: "como";
+    src:url("../font/CormorantGaramond-Regular.ttf");
+}
+
+@font-face {
+    font-family: "comob";
+    src:url("../font/CormorantGaramond-Bold.ttf");
+}
+
