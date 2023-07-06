@@ -92,8 +92,15 @@ html{
     font-size:4.2rem;
     top:50%;
     left:50%;
+    opacity: 0;
+    transition: all 0.8s ease 0.5s;
     transform: translate(-50%,-50%);
 }
+
+.videopart h1.on{
+    opacity:1;
+}
+
 
 /* aboutme */
 
@@ -231,7 +238,9 @@ html{
     margin-bottom:100px;
 }
 
-
+.programgraph{
+    width:1000px;
+}
 .programgraph h2{
     font-family: "old";
     color:#5A5B5B;
@@ -245,8 +254,16 @@ html{
 }
 
 .Right>ul{
+    width:0;
+    opacity: 0;
+    transition: all 1s ease 0.5s;
     display:flex;
     flex-direction: column;
+}
+
+.Right>ul.on{
+   width:700px;
+   opacity: 1;
 }
 
 .Right>ul>li{
@@ -330,6 +347,11 @@ html{
     display:flex;
     justify-content: center;
     z-index:100;
+    transition: all 0.5s ease 0s;
+}
+
+.naviflower.on{
+
 }
 
 .naviflower h2{
@@ -573,6 +595,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2000;
 }
 
 .popstation section.detail>h2{
@@ -600,8 +623,9 @@ html{
     position: absolute;
     top: 9%;
     left: 13.5%;
-    display:none;
-    /* display:flex; */
+    /* display:none; */
+    opacity: 0;
+    display:flex;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease 0s;
@@ -625,7 +649,8 @@ html{
     display:block;
 }
 .bookpopdetail.on{
-    display:flex;
+    /* display:flex; */
+    opacity: 1;
 }
 
 .bookpopdetail>img:nth-of-type(1){
@@ -660,6 +685,8 @@ html{
 
 
 /* banner 컨텐츠 */
+
+
 .bannercontents{
     display:flex;
     flex-direction: column;
@@ -705,13 +732,17 @@ html{
     margin-bottom:15px;
 }
 
-
+.movingarea{
+    border:1px solid red;
+    height:100vh;
+    background:url("../img/bacobg.jpg") 50% 50% no-repeat;
+}
 .bannerstation{
     position: relative;
     width:100%;
-    height:100vh;
+    height:8000px;
     overflow: hidden;
-    background:url("../img/bacobg.jpg") 50% 50% no-repeat;
+    /* background:url("../img/bacobg.jpg") 50% 50% no-repeat; */
 }
 
 .bannertrain{
@@ -742,9 +773,9 @@ html{
 .bannavi{
     position: absolute;
     left: 13.2%;
-    top: 27.5%;
+    top: 3.3%;
     cursor: pointer;
-    z-index:500;
+    z-index:200;
 }
 
 
@@ -863,6 +894,7 @@ html{
 }
 
 .webdesign{
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1013,4 +1045,66 @@ html{
     text-align: center;
     font-size:2rem;
     color:#fff;
+}
+
+/* report */
+
+/* .fixedre{
+    width:1500px;
+    height:100vh;
+    background: url("../img/fixedframe.png") 50% 50% no-repeat;
+} */
+
+.webdesign>.benport {
+    display: none;
+    border: 1px solid red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* transform: translate(-50%,-50%); */
+    width: 100%;
+    height: 100%;
+    background: url(../img/fixedframereal2.jpg) 50% 50% no-repeat;
+    padding-top: 0;
+    justify-content: center;
+    align-items: center;
+}
+.benport.on{
+    display:flex;
+}
+
+.masking{
+    position: absolute;
+    top: -4px;
+    left: 376px;
+}
+
+.report {
+    position: relative;
+    /* margin-left: 183px; */
+    /* margin-top: -12px; */
+    width: 1500px;
+    height: 816px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.report img{
+    width:100%;
+}
+
+.benport img.masking{
+    position: absolute;
+    top: 74px;
+    left: 620px;
+    width: 650px;
+}
+
+.Exit{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 2%;
+    right: 12%;
+    cursor: pointer;
 }

@@ -18,6 +18,9 @@ $(document).ready(function(){
             return
         }
 
+        if($(this).attr("class") =="webdesign"){
+            return
+        }
        
         if(delta<0){
             if($(this).next().length!=0){
@@ -54,16 +57,29 @@ $(document).ready(function(){
 
 
 
-    $(".btnpopup").click(function(){
+    $(".btnpopup").click(function(e){
+        e.preventDefault();
         $(".bookpopdetail").addClass("on")
         $(".modal").addClass("on")
     })
 
-    $(".popclose").click(function(){
+    $(".popclose").click(function(e){
+        e.preventDefault();
         $(".bookpopdetail").removeClass("on")
         $(".modal").removeClass("on")
     });
 
+
+
+    $(".reportup").click(function(e){
+        e.preventDefault();
+        $(".benport").addClass("on")
+    })
+
+    $(".portclose").click(function(e){
+        e.preventDefault();
+        $(".benport").removeClass("on")
+    });
 
      
     $(".bannavi li").click(function(){
@@ -144,33 +160,69 @@ $(document).ready(function(){
 
 
 
+    $(window).scroll(function(){
+        let winst = $(window).scrollTop() //스크롤바가 위에서 얼만큼 내려왔는지 계산
+        let winHeight = $(window).height()*1 //*0.65 //화면의 65% // 브라우저화면의 높이를 계산
+        // console.log(winst)
+        $(".videopart h1, .Right>ul,").each(function(){
+            if(winst+winHeight>$(this).offset().top){ //500을 더한 이유 : 효과가 적용되는 것이 top에 걸렸을 때 나타나기 때문에 시간차를 주기 위해 500픽셀만큼 내려오게 한 것(화면하단에 걸리게)
+                $(this).addClass("on")
 
+            }else{
+                $(this).removeClass("on")
+            }
+        })
+    
+    })
+
+
+    $(window).scroll(function(){
+            let winTop = $(window).scrollTop()
+            let fixedTop = $(".mydesign").offset().top
+            let distance = winTop - fixedTop
+    })
+    if (distance < 0) {
+           $(".naviflower").css("position", "absolute")
+           $(".naviflower").css("top", "0")
+        }
+
+    if (distance >= 0 && distance <= 8000 - movingAreaHeight){
+        $(".naviflower").css("position", "fixed")
+    }
+    
+          
+
+    
     $(window).scroll(function () {
         let winTop = $(window).scrollTop()
-        let fixedTop = $(".fixedFrame").offset().top
+        let fixedTop = $(".bannerstation").offset().top
         let distance = winTop - fixedTop
-        let movingAreaHeight = $(".bannerstation").height()
+        let movingAreaHeight = $(".movingArea").height()
          
         if (distance < 0) {
-          $(".bannerstation").css("position", "absolute")
-          $(".bannerstation").css("top", "0")
-          $(".bannerstation").css("left", "0")
+          $(".movingArea").css("position", "absolute")
+          $(".movingArea").css("top", "0")
+          $(".movingArea").css("left", "0")
         }
     
         if (distance >= 0 && distance <= 8000 - movingAreaHeight) {
-          $(".bannerstation").css("position", "fixed")
-          $(".bannerstation").css("top", "0")
-          $(".bannerstation").css("left", "0")
+          $(".movingArea").css("position", "fixed")
+          $(".movingArea").css("top", "0")
+          $(".movingArea").css("left", "0")
           // console.log(distance)
   
+          let percent = (distance / (8000 - movingAreaHeight) * 100) // 0~100 까지의 수
+          $("#progress path").css("stroke-dashoffset",pathLength-(pathLength*percent/100))
+          $(".per").text(Math.round(percent)+"%")
+  
           let percent2 = (distance / (8000 - movingAreaHeight) * 87.5) // 0~87.5 까지의 수
-          $(".bannertrain").css("transform","translateX("+(-(100/4)*count)+"%)")  
+          $(".train").css("transform","translateX(-"+percent2+"%)")  
         }
     
         if (distance > 8000 - movingAreaHeight) {
-          $(".bannerstation").css("position", "absolute")
-          $(".bannerstation").css("top", (8000 - movingAreaHeight) + "px")
-          $(".bannerstation").css("left", "0")
+          $(".movingArea").css("position", "absolute")
+          $(".movingArea").css("top", (8000 - movingAreaHeight) + "px")
+          $(".movingArea").css("left", "0")
         }
       })
 })
