@@ -1,5 +1,113 @@
 $(document).ready(function(){
 
+    //특정 지역에서 부드럽게 이동이 되지 않는 것을 해결하기 위하여 만든 state 
+    let state = false
+    let state2 = false
+
+    $(window).scroll(function(){
+        let winst = $(window).scrollTop() //스크롤바가 위에서 얼만큼 내려왔는지 계산
+        let winHeight = $(window).height()*1 // 브라우저화면의 높이를 계산
+        // console.log(winst)
+        $(".videopart h1, .Right>ul").each(function(){
+            if(winst+winHeight>$(this).offset().top){ 
+                $(this).addClass("on")
+
+            }else{
+                $(this).removeClass("on")
+            }
+        })
+
+        //banner영역 스크롤 조절 및 트레인 
+        let fixedTop = Math.floor($(".bannerstation").offset().top)
+        let distance = winst - fixedTop
+        let movingAreaHeight = $(".movingArea").height()
+        // console.log(distance)
+        if (distance < 0) {
+          state = true
+          $(".movingArea").css("position", "absolute")
+          $(".movingArea").css("top", "0")
+          $(".movingArea").css("left", "0")
+          
+        }
+
+        if (distance >= 0 && distance <= 5000 - movingAreaHeight) {
+            state = false
+          $(".movingArea").css("position", "fixed")
+          $(".movingArea").css("top", "0")
+          $(".movingArea").css("left", "0")
+
+          let percent2 = (distance / (5000 - movingAreaHeight) * 75) // 0~87.5 까지의 수
+          
+          let percent3 = percent2 / 75 * 100
+          let idx = Math.floor(percent3/25)
+          $(".bannavi ul li").removeClass("on")
+          $(".bannavi ul li").eq(idx).addClass("on")
+        
+          $(".bannertrain").css("transform","translateX(-"+percent2+"%)") 
+        //   $(".bannavi li").removeClass("on")
+        }
+    
+        if (distance > 5000 - movingAreaHeight) {
+          state = true
+          $(".movingArea").css("position", "absolute")
+          $(".movingArea").css("top", (5000 - movingAreaHeight) + "px")
+          $(".movingArea").css("left", "0")
+        }
+
+
+
+        //contact영역 자연스럽게 스크롤 조절
+        let contactTop = Math.floor($(".contact").offset().top)
+        let distance2 = winst - contactTop
+        // console.log(distance2)
+        // if (distance2 < 8852) {
+        //     state2= true
+        // }
+       
+
+
+
+
+
+        
+
+
+        //mydesign 영역 네비게이션 생성 
+        let mydesignTop = Math.floor($(".mydesign").offset().top)
+        let distance3 = winst - mydesignTop
+
+        if(distance3 < 0){
+            $(".naviflower").removeClass("on")
+        }
+        
+        if(distance3 >= 0){
+            $(".naviflower").addClass("on")          
+            // $("#flowerpath path").each(function(){
+            //     let path = $(this)
+            //     let idx = path.index()
+            //     let secondTerm = 0.2
+            //     let delay = idx*secondTerm
+
+            //     let pathLength = $(this).get(0).getTotalLength()
+            //     $(this).css("stroke-dasharray",pathLength)
+            //     $(this).css("stroke-dashoffset",pathLength)
+
+            //     setTimeout(function(){
+            //         path.css("transition",`stroke-dashoffset 1s ease ${delay}s, fill 1s ease ${delay+1}s`)
+            //         // path.css("transition","all 1s ease "+delay+"s")
+            //     },100)
+            // })   
+            
+            // setTimeout(function(){
+            //     $("#flowerpath").addClass("on")
+            // },100)
+        }
+
+        // console.log(distance3)
+    });
+
+
+
     //부드럽게 이동
     $(".container>div").on("wheel DOMMouseScroll",function(event){
         // console.log(event)
@@ -15,11 +123,19 @@ $(document).ready(function(){
         }
 
         if($(this).attr("class") =="bannerstation"){
-            return
+            if(state == false){
+                // true가되면 -> 한바닥씩 이동
+                // false가되면 -> 스크롤로 굴러가
+                return
+            }
         }
 
+
         if($(this).attr("class") =="webdesign"){
-            return
+            if(state2 == true){
+                return
+            }
+                
         }
        
         if(delta<0){
@@ -39,7 +155,9 @@ $(document).ready(function(){
         return false;
     })
     
+    
 
+    //하나 하나 클릭해서 네비게이션
     // $(".navi1").click(function(){
     //     // alert("test")
     //     let abouttop = $(".aboutme").offset().top
@@ -48,6 +166,7 @@ $(document).ready(function(){
     // })
     
     //navigation기능
+
     $(".navibg>a").click(function(e){
         e.preventDefault(); //a태그의 기본 기능 제거
         let targetHref = $(this).attr("href")
@@ -57,29 +176,46 @@ $(document).ready(function(){
 
 
 
+
+
     $(".btnpopup").click(function(e){
         e.preventDefault();
         $(".bookpopdetail").addClass("on")
-        $(".modal").addClass("on")
+        $(".blackdiv").addClass("on")
+        
     })
 
     $(".popclose").click(function(e){
         e.preventDefault();
         $(".bookpopdetail").removeClass("on")
         $(".modal").removeClass("on")
+        $(".blackdiv").removeClass("on")
     });
+
+
+
 
 
 
     $(".reportup").click(function(e){
         e.preventDefault();
         $(".benport").addClass("on")
+        state2 = true
     })
 
     $(".portclose").click(function(e){
         e.preventDefault();
         $(".benport").removeClass("on")
+        state2 = false
     });
+
+    // $(".report").scroll(function(){
+    //     return true
+    // })
+
+
+
+
 
      
     $(".bannavi li").click(function(){
@@ -98,6 +234,7 @@ $(document).ready(function(){
         $(".popupmove li").removeClass("on")
         $(this).addClass("on")
         let idx = $(this).index() //클릭한 리스트의 순번을 리턴함
+        
         // count = idx*5 //정해진 순번에 5를 곱한 값을 전역변수 count에 저장함으로써 휠을 내렸을 때 이동되는 기능이 정상적으로 작도오디게끔 해주는 코드
         $(".poptrain").css("transform","translateX("+(-(100/8)*idx)+"%)")        
     });
@@ -115,7 +252,10 @@ $(document).ready(function(){
         count++; //1, 2 ...
         //기차가 왼쪽으로 500픽셀
         if(count>7){count=0} //넣으면 마지막에서 멈춤
+        
          $(".poptrain").css("transform","translateX("+(-(100/8)*count)+"%)")
+         $(".popupmove li").removeClass("on")
+         $(".popupmove li").eq(count).addClass("on")
         //  moveSlider(count)       
     })
 
@@ -126,7 +266,8 @@ $(document).ready(function(){
         // -1, -2... //+주면 오른쪽으로 이동 왼쪽으로 이동 클릭시 오른쪽 클릭 하며 플러스 된 값에서 -1씩 감소 됨 그래서 prev버튼은 -가 붙을 수 없음 
         if(count<0){count=7} 
         $(".poptrain").css("transform","translateX("+(-(100/8)*count)+"%)") 
-        //-20 *-1 =20%
+        $(".popupmove li").removeClass("on")
+        $(".popupmove li").eq(count).addClass("on")
         // moveSlider(count)
     })
     // function moveSlider(idx){
@@ -160,69 +301,5 @@ $(document).ready(function(){
 
 
 
-    $(window).scroll(function(){
-        let winst = $(window).scrollTop() //스크롤바가 위에서 얼만큼 내려왔는지 계산
-        let winHeight = $(window).height()*1 //*0.65 //화면의 65% // 브라우저화면의 높이를 계산
-        // console.log(winst)
-        $(".videopart h1, .Right>ul,").each(function(){
-            if(winst+winHeight>$(this).offset().top){ //500을 더한 이유 : 효과가 적용되는 것이 top에 걸렸을 때 나타나기 때문에 시간차를 주기 위해 500픽셀만큼 내려오게 한 것(화면하단에 걸리게)
-                $(this).addClass("on")
-
-            }else{
-                $(this).removeClass("on")
-            }
-        })
     
-    })
-
-
-    $(window).scroll(function(){
-            let winTop = $(window).scrollTop()
-            let fixedTop = $(".mydesign").offset().top
-            let distance = winTop - fixedTop
-    })
-    if (distance < 0) {
-           $(".naviflower").css("position", "absolute")
-           $(".naviflower").css("top", "0")
-        }
-
-    if (distance >= 0 && distance <= 8000 - movingAreaHeight){
-        $(".naviflower").css("position", "fixed")
-    }
-    
-          
-
-    
-    $(window).scroll(function () {
-        let winTop = $(window).scrollTop()
-        let fixedTop = $(".bannerstation").offset().top
-        let distance = winTop - fixedTop
-        let movingAreaHeight = $(".movingArea").height()
-         
-        if (distance < 0) {
-          $(".movingArea").css("position", "absolute")
-          $(".movingArea").css("top", "0")
-          $(".movingArea").css("left", "0")
-        }
-    
-        if (distance >= 0 && distance <= 8000 - movingAreaHeight) {
-          $(".movingArea").css("position", "fixed")
-          $(".movingArea").css("top", "0")
-          $(".movingArea").css("left", "0")
-          // console.log(distance)
-  
-          let percent = (distance / (8000 - movingAreaHeight) * 100) // 0~100 까지의 수
-          $("#progress path").css("stroke-dashoffset",pathLength-(pathLength*percent/100))
-          $(".per").text(Math.round(percent)+"%")
-  
-          let percent2 = (distance / (8000 - movingAreaHeight) * 87.5) // 0~87.5 까지의 수
-          $(".train").css("transform","translateX(-"+percent2+"%)")  
-        }
-    
-        if (distance > 8000 - movingAreaHeight) {
-          $(".movingArea").css("position", "absolute")
-          $(".movingArea").css("top", (8000 - movingAreaHeight) + "px")
-          $(".movingArea").css("left", "0")
-        }
-      })
 })

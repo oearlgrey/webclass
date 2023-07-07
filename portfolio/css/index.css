@@ -10,6 +10,10 @@ html{
     color:#1E1E1E;
 }
 
+body{
+    position: relative;
+}
+
 .container{
     position: relative;
     margin:0 auto;
@@ -295,11 +299,11 @@ html{
 }
 
 .graph1 .Right li:nth-of-type(2) section{
-    width:500px;
+    width:450px;
 }
 
 .graph2 .Right li:nth-of-type(1) section{
-    width:520px;
+    width:550px;
 }
 
 .graph3 .Right li:nth-of-type(1) section{
@@ -341,17 +345,25 @@ html{
 
 .naviflower{
     width:150px;
-    position: fixed;
-    right: 0px;
+    position: absolute;
+    right: -3%;
     top: 19%;
+    right: 0px;
     display:flex;
     justify-content: center;
     z-index:100;
-    transition: all 0.5s ease 0s;
+    opacity: 0;
+    transition: all 0.5s ease 0.1s;
 }
+/* 
+#flowerpath{
+    fill: transparent;
+    stroke: #68828c;
+} */
 
 .naviflower.on{
-
+    opacity:1;
+    position: fixed;
 }
 
 .naviflower h2{
@@ -451,11 +463,14 @@ html{
 }
 
 .popupmove{
-    z-index: 100;
+    z-index:100;
     position: absolute;
     top:0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .popupmove>ul{
+    z-index:5;
     position: relative;
     margin-top:50px;
     width:1200px;
@@ -464,6 +479,8 @@ html{
 }
 
 .popupmove>ul>li {
+    cursor: pointer;
+    width: 30px;
     position: absolute;
     width:150px;
     height:90px;
@@ -473,7 +490,6 @@ html{
     align-items: center;
 }
 .popupmove li section{
-    cursor: pointer;
     width:30px;
     height:30px;
     border-radius:50%;
@@ -595,7 +611,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2000;
+    /* z-index: 200; */
 }
 
 .popstation section.detail>h2{
@@ -616,23 +632,61 @@ html{
     cursor:pointer;
 }
 
+/* .black{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    z-index:1500;
+    pointer-events: none;
+} */
+/* .black.on{
+    opacity: 1;
+    pointer-events: auto;
+} */
+.blackdiv{
+    z-index: 500;
+    position: absolute;
+    top: 36.268%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.blackdiv.on{
+    opacity:0.5;
+}
+
 .bookpopdetail{
     background:url("../img/detailbg.jpg") 50% 50% no-repeat;
     width:1450px;
     height:800px;
     position: absolute;
-    top: 9%;
-    left: 13.5%;
+    top: 39.6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     /* display:none; */
-    opacity: 0;
     display:flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
     transition: all 0.5s ease 0s;
-    z-index:1500;
+    z-index:600;
+    pointer-events: none;
 }
 
-.modal{
+.bookpopdetail.on{
+    opacity: 1;
+    pointer-events: auto;
+}
+/* .modal{
     transition:all 0.5s ease 0s;
     display:none;
     z-index:1000;
@@ -643,14 +697,10 @@ html{
     background:#000;
     opacity: 0.5;
     pointer-events: none;
-}
+} */
 
 .modal.on{
     display:block;
-}
-.bookpopdetail.on{
-    /* display:flex; */
-    opacity: 1;
 }
 
 .bookpopdetail>img:nth-of-type(1){
@@ -673,6 +723,8 @@ html{
     width:1350px;
     position: absolute;
     top:22px;
+    left: 50%;
+    transform: translateX(-50%);
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -732,17 +784,20 @@ html{
     margin-bottom:15px;
 }
 
-.movingarea{
-    border:1px solid red;
+.movingArea{
     height:100vh;
+    width: 100%;
     background:url("../img/bacobg.jpg") 50% 50% no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .bannerstation{
     position: relative;
     width:100%;
-    height:8000px;
+    height:5000px;
     overflow: hidden;
-    /* background:url("../img/bacobg.jpg") 50% 50% no-repeat; */
+    
 }
 
 .bannertrain{
@@ -773,7 +828,7 @@ html{
 .bannavi{
     position: absolute;
     left: 13.2%;
-    top: 3.3%;
+    top:  27.3%;
     cursor: pointer;
     z-index:200;
 }
@@ -902,7 +957,17 @@ html{
     height:100vh;
     background:url("../img/webback.jpg") 50% 50% no-repeat;
 }
-
+.webdesign>div.leaf{
+    width:60px;
+    height:60px;
+    position: absolute;
+    top: -17px;
+    left: 39.5%;
+}
+.webdesign>div.leaf img{
+    width: 60px;
+    
+}
 .webdesign>div{
     padding-top:120px;
     width:1500px;
@@ -958,10 +1023,18 @@ html{
     align-items: center;
 }
 
-.shortgo a{
 
+
+.shortgo a{
+    transition: all 0.5s ease 0s;
     margin-right:80px;
 }
+
+.shortgo a:hover{
+    color:#1f7ac5;
+}
+
+
 .shortgo a:last-of-type{
     margin-right:0px;
 }
@@ -971,7 +1044,7 @@ html{
     font-size:1.5rem;
     position: relative;
 }
-
+/* 
 .shortgo h3:after{
     position: absolute;
     top: 64px;
@@ -981,7 +1054,7 @@ html{
     width:150px;
     height:20px;
     background: url("../img/underl.svg") 50% 50% no-repeat;
-}
+} */
 
 
 .shortgo>a>h2{
@@ -1057,7 +1130,6 @@ html{
 
 .webdesign>.benport {
     display: none;
-    border: 1px solid red;
     position: absolute;
     left: 0;
     top: 0;
@@ -1097,7 +1169,7 @@ html{
     position: absolute;
     top: 74px;
     left: 620px;
-    width: 650px;
+    width: 677px;
 }
 
 .Exit{
@@ -1108,3 +1180,28 @@ html{
     right: 12%;
     cursor: pointer;
 }
+
+.webdesign>div .leaf{
+    border:1px solid red;
+    width:10px;
+    height:10px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:#5E8597;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3636;
+  }
